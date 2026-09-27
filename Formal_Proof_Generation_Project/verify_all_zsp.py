@@ -20,8 +20,8 @@ RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 MODEL_FOLDERS = [
     "gemini_flash_lite_zero",
-    # "gemini_flash_zero",
-    # "gemma_zero",
+    "gemini_flash_zero",
+    "gemma_zero",
 ]
 
 # --------------------------------------------------
