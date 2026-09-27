@@ -10,6 +10,7 @@ The models explored in this project include:
 
 ## Repository Structure
 
+```
 LeanCopilotTest/
 │
 ├── Formal_Proof_Generation_Project/
@@ -82,6 +83,7 @@ LeanCopilotTest/
 ├── LeanCopilotTest.lean
 ├── Main.lean
 └── README.md
+```
 
 ## Project Files and Directories
 
