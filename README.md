@@ -428,6 +428,12 @@ API keys should **not** be committed to the repository.
 
 Store the API key locally (in a text file on the system) and configure the generation script/environment as required before running the experiment.
 
+Before starting the proof generation, make sure to set the API key using the following command:
+```text
+export GEMINI_API_KEY="<enter the key here>"
+```
+**NOTE: While doing this, make sure you are in the project directory.**
+
 #### Running Proof Generation
 
 The generation scripts are located in:
@@ -538,7 +544,7 @@ summarized across different models, domains, and difficulty levels.
 <img width="298" height="112" alt="image" src="https://github.com/user-attachments/assets/197152ca-097b-4047-952d-2c3f894fc805" />
 
 
-**NOTE: After modifying the prompt and regenerating proofs for Lite model, following results were obtained. Overall accuracy in this case was 59.33%.**
+**NOTE: After modifying the prompt and regenerating proofs for Lite model, following results were obtained. Overall accuracy in this case was 59.33%.** \
 <img width="716" height="208" alt="image" src="https://github.com/user-attachments/assets/63b0d18d-8c28-452e-bf4b-2ed7160958b3" />
 
 ### Summary Statistics
