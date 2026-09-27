@@ -559,3 +559,4 @@ summarized across different models, domains, and difficulty levels.
 4. An output file during proof generation is created only when the proof generation is successful. In case of failure due to **Resource Exhaustion** error or **RPM time-out** (exceeds the limit of requests per minute), it is treated as a failure and no output file is created or metadata is recorded.
 5. Upon every re-run of the verification script, the results folder is re-written.
 6. **Flash and Gemma models' zero shot prompting has to be performed again after changing the prompt in their generation scripts.**
+7. Make sure to run the verification script in the **root directory** only. Else, path conflicts will occur and give errors.
