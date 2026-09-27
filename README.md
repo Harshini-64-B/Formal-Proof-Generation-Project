@@ -1,0 +1,364 @@
+# A Study of In-Context Learning for Formal Proof Generation
+
+This project studies the use of Large Language Models (LLMs) for generating formal proofs in Lean using in-context learning (ICL). The generated proofs are verified using Lean and analyzed based on correctness, error categories, proof difficulty, and model performance.
+
+The models explored in this project include:
+
+* Gemini 3.5 Flash-Lite
+* Gemini 3.5 Flash
+* Gemma 4 26B A4B IT
+
+## Repository Structure
+
+LeanCopilotTest/
+│
+├── Formal_Proof_Generation_Project/
+│   ├── dataset.csv
+│   ├── dataset_before_difficulty_update.csv
+│   │
+│   ├── examples/
+│   │   ├── Group/
+│   │   ├── List/
+│   │   ├── Nat/
+│   │   └── Prop/
+│   │
+│   ├── prompts/
+│   │   ├── edited_prompt_template.txt
+│   │   ├── ex_list_for_osp.txt
+│   │   ├── final_prompt_templates.txt
+│   │   ├── fs_prompt_template.txt
+│   │   ├── os_prompt_template.txt
+│   │   ├── theorem_count.txt
+│   │   └── zs_prompt_template.txt
+│   │
+│   ├── outputs/
+│   │   ├── gemini_flash_lite_zero/
+│   │   ├── gemini_flash_zero/
+│   │   └── gemma_zero/
+│   │
+│   ├── results/
+│   │   ├── verification_results.csv
+│   │   ├── failure_analysis.csv
+│   │   ├── summary_table.csv
+│   │   ├── error_summary_by_domain_difficulty.csv
+│   │   ├── error_summary_by_model_difficulty.csv
+│   │   ├── error_summary_by_model_domain.csv
+│   │   ├── error_summary_by_prompt_model.csv
+│   │   ├── zero_shot_results.xlsx
+│   │   └── plots
+│   │
+│   ├── scripts/
+|   |   ├── difficulty_analysis_summary/
+│   │   ├── add_theorems_to_dataset.py
+│   │   ├── analyze_tactic_difficulty.py
+│   │   ├── create_theorem_files.py
+│   │   ├── examples_analyze_tactic_difficulty.py
+│   │   ├── flash_lite_zero_file_structure_check.py
+│   │   ├── generate_gemini_flash_lite_zero.py
+│   │   ├── generate_gemini_flash_zero.py
+│   │   ├── generate_gemma_zero.py
+│   │   ├── generate_kimi_zero.py
+│   │   ├── update_difficulty.py
+│   │   └── update_list_entries.py
+│   │
+│   ├── theorems/
+│   │   ├── Group/
+│   │   ├── Lists/
+│   │   ├── Nat/
+│   │   └── Prop/
+│   │
+│   └── verify_all_zsp.py
+│
+├── LeanCopilotTest/
+│   ├── group_proofs.lean
+│   ├── list_proofs.lean
+│   ├── nat_proofs.lean
+│   └── prop_proofs.lean
+│
+├── .gitignore
+├── lake-manifest.json
+├── lakefile.toml
+├── lean-toolchain
+├── LeanCopilotTest.lean
+├── Main.lean
+└── README.md
+
+## Project Files and Directories
+
+### `Formal_Proof_Generation_Project/`
+
+This is the main directory containing the formal proof generation experiment.
+
+### Dataset
+
+#### `dataset.csv`
+
+The main dataset containing the theorem information used in the experiment, including theorem identifiers, file information, domain, and difficulty-related information.
+
+#### `dataset_before_difficulty_update.csv`
+
+A version of the dataset from before the difficulty information was updated.
+
+---
+
+### `examples/`
+
+Contains a smaller collection of representative Lean examples used for testing and analyzing tactic-based proof difficulty.
+
+The examples are organized into four domains:
+
+* `examples/Group/`
+* `examples/List/`
+* `examples/Nat/`
+* `examples/Prop/`
+
+Each directory contains selected theorem examples such as:
+
+* `add_eq_left.lean`
+* `add_zero_eq_id.lean`
+* `nsmul_add.lean`
+* `exists_of_length_succ.lean`
+* `mem_pair.lean`
+* `replicate_left_injective.lean`
+* `choose_eq_zero_iff.lean`
+* `dvd_antisymm_iff.lean`
+* `lt_factorial_self.lean`
+* `Iff.or.lean`
+* `and_symm_left.lean`
+* `not_iff_comm.lean`
+
+These examples are used separately from the main theorem dataset for tactic-difficulty analysis.
+
+---
+
+### `prompts/`
+
+Contains the prompt templates used to interact with the LLMs.
+
+#### `zs_prompt_template.txt`
+
+Template for **zero-shot prompting**, where the theorem is provided without proof examples.
+
+#### `os_prompt_template.txt`
+
+Template for **one-shot prompting**, where one solved example is provided along with the target theorem.
+
+#### `fs_prompt_template.txt`
+
+Template for **few-shot prompting**, where multiple solved examples are provided before the target theorem.
+
+#### `edited_prompt_template.txt`
+
+An edited version of the prompt template used during prompt development and refinement.
+
+#### `ex_list_for_osp.txt`
+
+Contains the examples selected for the one-shot prompting setup.
+
+#### `final_prompt_templates.txt`
+
+Contains the finalized prompt templates used in the experiments.
+
+#### `theorem_count.txt`
+
+Contains theorem-count information used in organizing the dataset and experiments.
+
+> API keys and other sensitive credentials are intentionally excluded from the repository.
+
+---
+
+### `theorems/`
+
+Contains the main theorem dataset as individual Lean files.
+
+The dataset is divided into four domains:
+
+* **Lists** – 50 theorems
+* **Nat** – 34 theorems
+* **Prop** – 33 theorems
+* **Group** – 33 theorems
+
+The theorem files contain the formal statements given to the LLMs for proof generation.
+
+---
+
+### `outputs/`
+
+Contains the Lean proof files generated by the different models.
+
+The current output directories include:
+
+#### `outputs/gemini_flash_lite_zero/`
+
+Contains proofs generated by **Gemini 3.5 Flash-Lite** using zero-shot prompting.
+
+#### `outputs/gemini_flash_zero/`
+
+Contains proofs generated by **Gemini 3.5 Flash** using zero-shot prompting.
+
+#### `outputs/gemma_zero/`
+
+Contains proofs generated by **Gemma 4 26B A4B IT** using zero-shot prompting.
+
+Each model directory contains individual `.lean` files corresponding to the theorem names.
+
+---
+
+### Metadata Files
+
+The following CSV files record metadata associated with proof-generation runs:
+
+* `gemini_flash_lite_zero_metadata.csv`
+* `gemini_flash_zero_metadata.csv`
+* `gemma_zero_metadata.csv`
+
+These files contain information about the generation runs, such as the model, prompt type, theorem/domain information, token usage, and generation latency.
+
+---
+
+### `scripts/`
+
+Contains the Python scripts used to create the dataset, generate proofs, verify outputs, and analyze theorem/proof difficulty.
+
+#### `add_theorems_to_dataset.py`
+
+Adds theorem information to the project dataset.
+
+#### `create_theorem_files.py`
+
+Creates individual Lean theorem files from the dataset.
+
+#### `update_difficulty.py`
+
+Updates the difficulty information associated with theorems.
+
+#### `update_list_entries.py`
+
+Updates list-related entries in the dataset.
+
+#### `generate_gemini_flash_lite_zero.py`
+
+Generates Lean proofs using Gemini 3.5 Flash-Lite with zero-shot prompting.
+
+#### `generate_gemini_flash_zero.py`
+
+Generates Lean proofs using Gemini 3.5 Flash with zero-shot prompting.
+
+#### `generate_gemma_zero.py`
+
+Generates Lean proofs using Gemma 4 26B A4B IT with zero-shot prompting.
+
+#### `generate_kimi_zero.py`
+
+Contains the zero-shot proof-generation setup used for experiments with the Kimi model.
+
+#### `analyze_tactic_difficulty.py`
+
+Analyzes theorem difficulty based on the tactics used in the reference proofs.
+
+#### `examples_analyze_tactic_difficulty.py`
+
+Performs tactic-difficulty analysis specifically for the examples in the `examples/` directory.
+
+#### `flash_lite_zero_file_structure_check.py`
+
+Checks the file structure and formatting of the generated Gemini Flash-Lite zero-shot outputs.
+
+#### `verify_all_zsp.py`
+
+Verifies the generated zero-shot proofs using the Lean environment and records whether the generated proofs compile successfully.
+
+---
+
+### `results/`
+
+Contains the results obtained from Lean verification and subsequent analysis.
+
+#### Verification and analysis files
+
+* `verification_results.csv` – detailed verification results for generated proofs.
+* `failure_analysis.csv` – analysis of failed proof generations and their error categories.
+* `summary_table.csv` – summary of the verification and performance results.
+* `error_summary_by_domain_difficulty.csv` – error statistics grouped by domain and theorem difficulty.
+* `error_summary_by_model_difficulty.csv` – error statistics grouped by model and theorem difficulty.
+* `error_summary_by_model_domain.csv` – error statistics grouped by model and theorem domain.
+* `error_summary_by_prompt_model.csv` – error statistics grouped by prompting approach and model.
+* `zero_shot_results.xlsx` – consolidated zero-shot experiment results.
+
+#### Visualizations
+
+The `results/` directory also contains plots showing the distribution of errors and model performance, including:
+
+* `model_pass_fail.png`
+* `overall_error_distribution.png`
+* `gemini_flash_lite_zero_error_distribution.png`
+* `gemini_flash_zero_error_distribution.png`
+* `gemma_zero_error_distribution.png`
+
+---
+
+### `LeanCopilotTest/`
+
+Contains Lean proof files used for testing and experimenting with the theorem domains independently of the main proof-generation pipeline.
+
+* `group_proofs.lean` – group/algebra-related proof examples.
+* `list_proofs.lean` – list-related proof examples.
+* `nat_proofs.lean` – natural-number proof examples.
+* `prop_proofs.lean` – proposition and logical reasoning proof examples.
+
+---
+
+### Lean Project Configuration
+
+#### `lakefile.toml`
+
+Defines the Lean project configuration and its dependencies used by Lake, Lean's project/build tool.
+
+#### `lake-manifest.json`
+
+Records the project's Lean dependencies and their revisions.
+
+#### `lean-toolchain`
+
+Specifies the Lean version/toolchain used by the project.
+
+These files allow the Lean environment and its dependencies to be recreated without committing the generated `.lake/` directory.
+
+#### `Main.lean`
+
+A Lean entry-point file created as part of the Lean project setup.
+
+#### `LeanCopilotTest.lean`
+
+The root Lean library module for the project.
+
+#### `.gitignore`
+
+Specifies files and directories that should not be tracked by Git, including generated environment files, archives, logs, and sensitive files.
+
+## Project Workflow
+
+At a high level, the project follows this workflow:
+
+Theorem Dataset
+       │
+       ▼
+Theorem Difficulty Analysis
+       │
+       ▼
+Prompt Construction
+       │
+       ▼
+LLM Proof Generation
+       │
+       ▼
+Generated Lean Proofs
+       │
+       ▼
+Lean Verification
+       │
+       ▼
+Error / Difficulty Analysis
+       │
+       ▼
+Model Performance Analysis
