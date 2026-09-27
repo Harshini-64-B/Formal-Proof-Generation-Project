@@ -1,16 +1,8 @@
 name = "LeanCopilotTest"
 version = "0.1.0"
-defaultTargets = ["leancopilottest"]
+defaultTargets = []
 
 moreLinkArgs = ["-L./.lake/packages/LeanCopilot/.lake/build/lib", "-lctranslate2"]
-
-[[lean_lib]]
-name = "LeanCopilotTest"
-nativeFacets = ["shared"]
-
-[[lean_exe]]
-name = "leancopilottest"
-root = "Main"
 
 [[require]]
 name = "LeanCopilot"
@@ -20,6 +12,3 @@ rev = "main"
 [[require]]
 name = "mathlib"
 scope = "leanprover-community"
-
-[[lean_lib]]
-name = "CoW"
