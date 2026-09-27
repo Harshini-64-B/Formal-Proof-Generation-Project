@@ -1,0 +1,25 @@
+ID,theorem_name,file_name,domain,tactic_count,difficulty,tactics
+1,append_cons,append_cons.lean,list,1,easy,simp
+2,cons_ne_self,cons_ne_self.lean,list,2,easy,"intro, simp"
+3,drop_tail,drop_tail.lean,list,1,easy,simp
+4,exists_of_length_succ,exists_of_length_succ.lean,list,5,medium,"intro, cases, rw, contradiction, simp"
+5,getElem?_drop,getElem?_drop.lean,list,1,easy,simp
+6,head?_cons,head?_cons.lean,list,1,easy,simp
+7,length_tail,length_tail.lean,list,1,easy,simp
+8,map_cons,map_cons.lean,list,1,easy,simp
+9,mem_map,mem_map.lean,list,8,hard,"intro, constructor, intro, simp, exact, intro, simp, exact"
+10,mem_of_getElem?,mem_of_getElem?.lean,list,3,easy,"rcases, rw, exact"
+11,replicate_left_injective,replicate_left_injective.lean,list,5,medium,"unfold, intro, have, simp, exact"
+12,reverse_cons,reverse_cons.lean,list,1,easy,simp
+13,subset_singleton_iff,subset_singleton_iff.lean,list,15,hard,"constructor, intro, rw, constructor, rfl, intro, have, simpa, intro, rcases, rw, intro, simp, simp, exact"
+14,tail?_append_of_ne_nil,tail?_append_of_ne_nil.lean,list,3,easy,"cases, contradiction, simp"
+15,take_eq_take_min,take_eq_take_min.lean,list,1,easy,simp
+16,choose_eq_zero_iff,choose_eq_zero_iff.lean,nat,6,medium,"constructor, intro, contrapose!, exact, intro, exact"
+17,dvd_antisymm_iff,dvd_antisymm_iff.lean,nat,6,medium,"constructor, intro, simp_all, intro, rcases, exact"
+18,lt_factorial_self,lt_factorial_self.lean,nat,5,medium,"have, lia, have, rw, exact"
+19,and_symm_left,and_symm_left.lean,prop,5,medium,"constructor, intro, simp_all, intro, simp_all"
+20,Iff,Iff.or.lean,prop,5,medium,"constructor, intro, simp_all, intro, simp_all"
+21,ne_of_ne_of_eq,not_iff_comm.lean,prop,4,medium,"intro, simp, rw, exact"
+22,add_eq_left,add_eq_left.lean,group,6,medium,"constructor, intro, apply, simpa, intro, simpa"
+23,add_zero_eq_id,add_zero_eq_id.lean,group,4,medium,"funext, rw, unfold, rfl"
+24,nsmul_add,nsmul_add.lean,group,5,medium,"induction, simp, repeat, rw, rw"

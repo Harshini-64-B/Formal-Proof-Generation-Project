@@ -1,0 +1,14 @@
+# Zero shot prompt
+
+    "Complete the following Lean 4 theorem by replacing `sorry` with a valid proof.\n"
+    "Return exactly ONE completed theorem.\n"
+    "Return the complete theorem declaration, including the theorem name, "
+    "arguments, statement, and proof.\n"
+    "The proof must use the `:= by` format.\n"
+    "Do not change the theorem name, arguments, or statement.\n"
+    "Do not provide alternative proofs or multiple versions of the theorem.\n"
+    "Do not include explanations, comments, introductory text, concluding text, "
+    "or Markdown code fences.\n"
+    "Return only the completed Lean theorem.\n\n"
+    "Theorem to complete:\n"
+    + theorem_text

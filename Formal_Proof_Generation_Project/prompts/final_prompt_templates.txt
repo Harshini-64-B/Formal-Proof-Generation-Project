@@ -1,0 +1,49 @@
+# Zero-shot prompting
+Give the proof for the following theorem in formal language. Explanations not required.
+<theorem>
+  sorry
+
+# One-shot prompting
+Example: 
+<related example theorem from examples folder>
+Refer the example that you are given above and understand why that proof was written. 
+Using that understanding, give the proof for the following theorem in formal language. 
+Do not blindly apply the same logic or tactic (as in the example) for everything. 
+Explanations not required. 
+<theorem>
+  sorry
+
+# Few-shot prompting
+Examples:
+1. theorem length_tail {l : List α} : l.tail.length = l.length - 1 := by
+  simp
+2. theorem append_cons (as : List α) (b : α) (bs : List α) : as ++ b :: bs = as ++ [b] ++ bs := by
+  simp
+3. theorem head?_cons {a : α} {l : List α} : (a::l).head? = some a := by
+  simp
+4. theorem mem_map {f : α → β} : ∀ {l : List α}, b ∈ l.map f ↔ ∃ a, a ∈ l ∧ f a = b := by
+  intro l
+  constructor
+  . intro h
+    simp at h
+    exact h
+  . intro h1
+    simp
+    exact h1
+5. theorem replicate_left_injective (a : α) : Function.Injective (List.replicate · a) := by
+  unfold Function.Injective
+  intro m n h
+  have h_len := congrArg List.length h
+  simp at h_len
+  exact h_len
+6. theorem drop_tail {l : List α} {i : Nat} : l.tail.drop i = l.drop (i + 1) := by
+  simp
+7. theorem mem_of_getElem? {l : List α} {i : Nat} {a : α} (h : l[i]? = some a) : a ∈ l := by
+  rcases List.getElem?_eq_some_iff.mp h with ⟨hi, heq⟩
+  rw[← heq]
+  exact List.getElem_mem hi
+Refer the above examples and identify the logic behind the proofs. 
+Using that understanding, give the proof for the following theorem in formal language. 
+Do not blindly apply the same logic or tactic (as in the examples) for everything. Explanations not required.
+<theorem>
+  sorry

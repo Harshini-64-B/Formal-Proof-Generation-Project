@@ -1,0 +1,85 @@
+# Example 1 - length_tail
+1. length_nil
+2. length_cons
+3. length_append
+4. length_reverse
+5. length_map
+6. length_singleton
+
+
+# Example 2 - append_cons
+1. nil_append
+2. append_nil
+3. append_eq_has_append
+
+
+# Example 3 - reverse_cons
+1. reverse_nil
+2. reverse_singleton
+3. reverse_reverse
+
+
+# Example 4 - mem_of_getElem?
+1. mem_singleton
+2. not_mem_nil
+3. mem_cons_self
+4. mem_reverse
+
+
+# Example 5 - maps_cons
+1. map_id
+2. map_nil
+3. map_append
+4. map_singleton
+
+
+# Example 6 - take_eq_take_min
+1. take_zero
+2. take_length
+
+# Example 7 - drop_tail
+1. drop_zero
+2. drop_length
+
+# Example 8 - cons_ne_self
+1. cons_ne_nil
+2. cons_head?_tail
+3. cons_head!_tail
+
+# Example 9 - tail?_append_of_ne_nil
+1. tail_cons
+2. tail_nil
+3. tail_append_singleton_of_ne_nil
+
+# Example 10 - head?_cons
+1. head_cons
+2. head?_nil 
+3. head!_cons
+4. head!_mem_self
+5. head?_append_of_ne_nil
+
+# Example 11 - mem_map
+1. mem_append
+2. eq_cons_of_mem_head?
+3. mem_head?_append_of_mem_head?
+
+# Example 12 - exists_of_length_succ
+1. ne_nil_of_length_pos
+2. length_pos_of_ne_nil
+
+# Example 13 - subset_singleton_iff
+1. length_pos_iff_ne_nil
+2. length_eq_succ_iff
+3. length_eq_two
+4. length_eq_three
+5. length_eq_four
+
+
+# Example 14 - replicate_left_injective
+1. append_left_injective
+2. append_right_injective
+3. replicate_add
+4. replicate_succ
+
+# Example 15 - getElem?_drop
+1. getElem?_length

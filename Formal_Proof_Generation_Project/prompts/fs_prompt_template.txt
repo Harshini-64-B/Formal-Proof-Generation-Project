@@ -1,0 +1,3 @@
+<related_example_theorems(any 5 or 6)>
+Refer the above examples and give the proof for the following theorem in formal language.
+<theorem>

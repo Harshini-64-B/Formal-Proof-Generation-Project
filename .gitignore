@@ -1,0 +1,5 @@
+/.lake
+*.zip
+Formal_Proof_Generation_Project/prompts/api_keys.txt
+Formal_Proof_Generation_Project/prompts/theorem_count.txt
+Formal_Proof_Generation_Project/logs/

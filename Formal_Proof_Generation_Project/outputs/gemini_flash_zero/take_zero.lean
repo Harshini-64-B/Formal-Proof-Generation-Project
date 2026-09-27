@@ -1,0 +1,2 @@
+theorem take_zero {α} (l : List α) : l.take 0 = [] := by
+  rfl
