@@ -343,8 +343,212 @@ Error Analysis based on Error Categories
 Model Performance Analysis based on **Model x Prompt** and **Model x Difficulty** Accuracies
 ```
 
+## Environment Setup
+
+### 1. Lean and Lake Environment Setup
+
+The project uses **Lean 4** with **Mathlib** and **Lake** for dependency management and proof verification. The project was developed and tested in an Ubuntu environment running through WSL.
+
+The repository contains the following files for recreating the Lean environment:
+
+* `lean-toolchain` – specifies the Lean version used by the project.
+* `lakefile.toml` – contains the project configuration and dependencies.
+* `lake-manifest.json` – records the dependency versions/revisions.
+
+#### Step 1: Open the project in WSL
+
+First open WSL through VS Code. Then, open a new terminal and clone the repository and enter the project directory:
+
+```bash
+git clone https://github.com/Harshini-64-B/Formal-Proof-Generation-Project.git
+cd Formal-Proof-Generation-Project
+```
+**NOTE: 'Formal-Proof-Generation-Project' is the root directory here which has the project directory and Lean environment files.**
+
+#### Step 2: Check the Lean version
+
+```bash
+lean --version
+```
+
+The project uses the Lean toolchain specified in `lean-toolchain`.
+
+#### Step 3: Download/build the project dependencies
+
+Run:
+
+```bash
+lake update
+```
+
+This downloads the dependencies specified by the project.
+
+**NOTE: The `.lake/` directory is generated locally by Lake and is not included in the repository.**
+
+#### Step 4: Test the Lean environment
+
+A Lean file can be compiled using:
+
+```bash
+lake env lean <path-to-file>.lean
+```
+
+For example:
+
+```bash
+lake env lean LeanCopilotTest/nat_proofs.lean
+```
+
+If Lean compiles the file without errors, the Lean environment is set up correctly.
+
+---
+
+### 2. Proof Generation Setup
+
+The proof-generation scripts are Python scripts that communicate with the respective LLM APIs and save the generated Lean proofs in the `outputs/` directory.
+
+Before running the generation scripts, install the required Python package for the Gemini/Gemma models:
+
+```bash
+pip install google-genai
+```
+
+If the system's Python environment is externally managed, the package can be installed using:
+
+```bash
+pip install google-genai --break-system-packages
+```
+**NOTE: This step can be performed in the cloned directory itself. No need to change the directory to "Formal_Proof_Generation_Project".**
+
+#### API Key Configuration
+
+The proof-generation scripts require an API key to access the corresponding model API.
+
+API keys should **not** be committed to the repository.
+
+Store the API key locally (in a text file on the system) and configure the generation script/environment as required before running the experiment.
+
+#### Running Proof Generation
+
+The generation scripts are located in:
+
+```text
+Formal_Proof_Generation_Project/scripts/
+```
+So use :
+```
+cd Formal-Proof-Generation-Project/Formal_Proof_Generation_Project/scripts/
+```
+
+Then, run the python script.
+For example, Gemini 3.5 Flash-Lite zero-shot generation can be run using:
+
+```bash
+python3 scripts/generate_gemini_flash_lite_zero.py
+```
+
+Gemini 3.5 Flash zero-shot generation:
+
+```bash
+python3 scripts/generate_gemini_flash_zero.py
+```
+
+Gemma zero-shot generation:
+
+```bash
+python3 scripts/generate_gemma_zero.py
+```
+
+The generated proofs are saved under the corresponding directories in:
+
+```text
+Formal_Proof_Generation_Project/outputs/
+```
+
+For example:
+
+```text
+outputs/
+├── gemini_flash_lite_zero/
+├── gemini_flash_zero/
+└── gemma_zero/
+```
+
+The generation scripts also record metadata associated with the generation process, such as token usage and generation latency, in the corresponding metadata CSV files.
+
+---
+
+### 3. Running the Verification Script
+
+After proof generation, the generated Lean files are verified automatically using the Lean compiler.
+
+The verification process uses:
+
+```bash
+lake env lean
+```
+
+to check whether each generated proof is valid Lean code.
+This environment is triggered/setup when the verification script is executed.
+
+The verification script is:
+
+```text
+Formal_Proof_Generation_Project/verify_all_zsp.py
+```
+
+#### Step 1: Navigate to the project directory
+
+```bash
+cd Formal_Proof_Generation_Project
+```
+
+#### Step 2: Run the verification script
+
+```bash
+python3 verify_all_zsp.py
+```
+
+The script processes the generated proof files, invokes the Lean environment for verification, and records whether each generated proof passes or fails.
+
+The verification results are saved in:
+
+```text
+results/
+```
+
+Important output files include:
+
+* `verification_results.csv` – detailed PASS/FAIL verification results.
+* `failure_analysis.csv` – analysis of failed proof generations.
+* `summary_table.csv` – summary of verification results.
+* Error-summary CSV files – aggregated error statistics by model, domain, difficulty, and prompting configuration.
+
+## Results
+
+The generated proofs were verified using Lean, and the verification results were
+summarized across different models, domains, and difficulty levels.
+
+**NOTE: All the below results are before modifying the prompt for zero shot prompting.**
+<img width="627" height="402" alt="image" src="https://github.com/user-attachments/assets/082d3021-01b1-4c6d-939d-f85abe1bb20d" />
+
+### Summary Statistics
+<img width="837" height="171" alt="image" src="https://github.com/user-attachments/assets/d1549951-e414-40bd-b0ce-090957189ce0" />
+
+<img width="298" height="112" alt="image" src="https://github.com/user-attachments/assets/197152ca-097b-4047-952d-2c3f894fc805" />
+
+
+**NOTE: After modifying the prompt and regenerating proofs for Lite model, following results were obtained. Overall accuracy in this case was 59.33%.**
+<img width="716" height="208" alt="image" src="https://github.com/user-attachments/assets/63b0d18d-8c28-452e-bf4b-2ed7160958b3" />
+
+### Summary Statistics
+<img width="552" height="102" alt="image" src="https://github.com/user-attachments/assets/9530989c-1bc6-498c-8ebc-56e5c50d8255" />
+
+
 ## Points to Remember
 1. Model metadata csv files will be **appended** upon subsequent runs of the corresponding proof generation scripts.
 2. Follow-up of point 1, in case of lesser accuracy, if the proofs need to be regenerated for a model from scratch, manually delete the data in the metadata csv file for that model (**excluding the first row** as it contains the column names) and proceed.
 3. During proof generation, if a proof generation fails, it proceeds to the next one and records its metadata in the correspoding csv file. Then re-run the corresponding generation script again. Then, it skips all the generated theorems and generates proof for only those which are not yet generated and appends their metadata.
 4. An output file during proof generation is created only when the proof generation is successful. In case of failure due to **Resource Exhaustion** error or **RPM time-out** (exceeds the limit of requests per minute), it is treated as a failure and no output file is created or metadata is recorded.
+5. Upon every re-run of the verification script, the results folder is re-written.
+6. **Flash and Gemma models' zero shot prompting has to be performed again after changing the prompt in their generation scripts.**
