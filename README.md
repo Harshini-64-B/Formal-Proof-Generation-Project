@@ -55,7 +55,6 @@ LeanCopilotTest/
 │   │   ├── generate_gemini_flash_lite_zero.py
 │   │   ├── generate_gemini_flash_zero.py
 │   │   ├── generate_gemma_zero.py
-│   │   ├── generate_kimi_zero.py
 │   │   ├── update_difficulty.py
 │   │   └── update_list_entries.py
 │   │
