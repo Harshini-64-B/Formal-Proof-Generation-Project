@@ -64,8 +64,9 @@ LeanCopilotTest/
 │   │   ├── Nat/
 │   │   └── Prop/
 │   │
-│   └── verify_all_zsp.py
-│
+│   |── verify_all_zsp.py
+│   └── metadata files also are present here
+|
 ├── LeanCopilotTest/
 │   ├── group_proofs.lean
 │   ├── list_proofs.lean
