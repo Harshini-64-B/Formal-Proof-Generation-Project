@@ -318,6 +318,7 @@ Specifies files and directories that should not be tracked by Git, including gen
 
 At a high level, the project follows this workflow:
 
+```
 Theorem Dataset
        │
        ▼
@@ -340,3 +341,10 @@ Error Analysis based on Error Categories
        │
        ▼
 Model Performance Analysis based on **Model x Prompt** and **Model x Difficulty** Accuracies
+```
+
+## Points to Remember
+1. Model metadata csv files will be **appended** upon subsequent runs of the corresponding proof generation scripts.
+2. Follow-up of point 1, in case of lesser accuracy, if the proofs need to be regenerated for a model from scratch, manually delete the data in the metadata csv file for that model (**excluding the first row** as it contains the column names) and proceed.
+3. During proof generation, if a proof generation fails, it proceeds to the next one and records its metadata in the correspoding csv file. Then re-run the corresponding generation script again. Then, it skips all the generated theorems and generates proof for only those which are not yet generated and appends their metadata.
+4. An output file during proof generation is created only when the proof generation is successful. In case of failure due to **Resource Exhaustion** error or **RPM time-out** (exceeds the limit of requests per minute), it is treated as a failure and no output file is created or metadata is recorded.
