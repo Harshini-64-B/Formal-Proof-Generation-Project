@@ -68,7 +68,7 @@ if not API_KEY:
     )
 
 client = genai.Client(api_key=API_KEY)
-REQUEST_DELAY = 2
+REQUEST_DELAY = 4
 
 # PROMPT
 def extract_theorem(file_text):
