@@ -1,3 +1,2 @@
-theorem choose_eq_zero_of_lt : ∀ {n k}, n < k → Nat.choose n k = 0 := by
-  intro n k h
-  exact Nat.choose_eq_zero_of_lt h
+theorem nat_choose_self_two (n : ) : Nat.choose n 2 = n * (n - 1) / 2 := by
+  exact Nat.choose_two_right n

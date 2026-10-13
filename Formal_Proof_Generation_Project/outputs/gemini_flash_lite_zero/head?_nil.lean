@@ -1,2 +1,4 @@
-theorem head?_nil {α} : ([] : List α).head? = none := by
-  rfl
+theorem list_append_nil {α : Type} (xs : List α) : xs ++ [] = xs := by
+  induction xs with
+  | nil => rfl
+  | cons y ys ih => simp [ih]

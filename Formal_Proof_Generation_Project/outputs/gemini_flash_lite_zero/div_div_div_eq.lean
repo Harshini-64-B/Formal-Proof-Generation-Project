@@ -1,2 +1,2 @@
-theorem div_div_div_eq {α : Type u_1} [DivisionCommMonoid α] (a b c d : α) : a / b / (c / d) = a * d / (b * c) := by
-  simp [div_eq_mul_inv, mul_inv, mul_comm, mul_left_comm, mul_assoc]
+theorem inv_inv_eq {G : Type*} [Group G] (a : G) : (a⁻¹)⁻¹ = a := by
+  exact inv_inv a

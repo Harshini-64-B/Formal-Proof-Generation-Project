@@ -1,2 +1,2 @@
-theorem length_singleton {α} (a : α) : ([a] : List α).length = 1 := by
-  rfl
+theorem list_reverse_involutive (l : List α) : l.reverse.reverse = l := by
+  exact List.reverse_reverse l

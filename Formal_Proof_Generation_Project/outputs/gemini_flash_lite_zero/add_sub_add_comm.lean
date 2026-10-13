@@ -1,2 +1,2 @@
-theorem add_sub_add_comm {α : Type u_1} [SubtractionCommMonoid α] (a b c d : α) : a + b - (c + d) = a - c + (b - d) := by
-  exact add_sub_add_comm a b c d
+theorem mul_inv_cancel_left {G : Type*} [Group G] (a b : G) : a⁻¹ * (a * b) = b := by
+  rw [← mul_assoc, mul_right_inv, one_mul]

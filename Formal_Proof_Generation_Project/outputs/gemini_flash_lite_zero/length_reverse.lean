@@ -1,5 +1,4 @@
-theorem length_reverse {α} (l : List α) : l.reverse.length = l.length := by
-  induction l with
+theorem list_rev_nil_inv {α : Type u} (l : List α) (h : l.reverse = []) : l = [] := by
+  cases l with
   | nil => rfl
-  | cons x xs ih =>
-    simp [List.reverse_cons, List.length_append, ih]
+  | cons x xs => contradiction

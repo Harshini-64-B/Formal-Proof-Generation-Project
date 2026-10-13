@@ -1,4 +1,2 @@
-theorem cons_head!_tail [Inhabited α] (l : List α) (h : l ≠ []) : l.head! :: l.tail = l := by
-  cases l with
-  | nil => contradiction
-  | cons x xs => rfl
+theorem list_reverse_involutive (l : List α) : l.reverse.reverse = l := by
+  exact List.reverse_reverse l

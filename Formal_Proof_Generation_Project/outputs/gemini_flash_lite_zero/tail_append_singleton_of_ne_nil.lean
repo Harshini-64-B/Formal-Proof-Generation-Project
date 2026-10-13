@@ -1,4 +1,4 @@
-theorem tail_append_singleton_of_ne_nil {a : α} {l : List α} (h : l ≠ []) : (l ++ [a]).tail = l.tail ++ [a] := by
+theorem list_rev_nil_inv {α : Type u} (l : List α) (h : l.reverse = []) : l = [] := by
   cases l with
-  | nil => contradiction
-  | cons x xs => rfl
+  | nil => rfl
+  | cons x xs => contradiction

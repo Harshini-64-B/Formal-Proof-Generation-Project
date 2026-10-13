@@ -1,5 +1,2 @@
-theorem factorial_le {m n} (h : m ≤ n) : Nat.factorial m ≤ Nat.factorial n := by
-  induction h with
-  | refl => rfl
-  | step h_le ih =>
-    exact Nat.le_trans ih (Nat.le_mul_of_pos_right _ (Nat.factorial_pos _))
+theorem nat_choose_self_two (n : ) (h : 2 ≤ n) : Nat.choose n 2 = n * (n - 1) / 2 := by
+  exact Nat.choose_two_right n

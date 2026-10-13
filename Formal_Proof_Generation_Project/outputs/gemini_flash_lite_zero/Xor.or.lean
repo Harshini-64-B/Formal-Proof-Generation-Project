@@ -1,4 +1,8 @@
-theorem Xor.or {a b : Prop} (h : Xor a b) : a ∨ b := by
-  rcases h with ⟨hab, _⟩ | ⟨_, hab⟩
-  · exact Or.inl hab.1
-  · exact Or.inr hab.2
+theorem Pierce_law {P Q : Prop} : ((P → Q) → P) → P := by
+  intro h
+  by_cases hP : P
+  · exact hP
+  · exfalso
+    apply h
+    intro hp
+    exact False.elim (hP hp)

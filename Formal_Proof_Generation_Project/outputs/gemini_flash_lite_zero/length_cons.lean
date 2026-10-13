@@ -1,2 +1,2 @@
-theorem length_cons (a : α) (l : List α) : (a :: l).length = l.length + 1 := by
-  rfl
+theorem list_append_nil {α : Type} (l : List α) : l ++ [] = l := by
+  exact List.append_nil l

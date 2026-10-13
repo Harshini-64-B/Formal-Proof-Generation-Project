@@ -1,6 +1,11 @@
-theorem by_contradiction {p : Prop} : (¬p → False) → p := by
+theorem demorgan_1 {P Q : Prop} : ¬ (P ∨ Q) → ¬ P ∧ ¬ Q := by
   intro h
-  by_cases hp : p
-  · exact hp
-  · exfalso
-    exact h hp
+  constructor
+  · intro hp
+    apply h
+    left
+    exact hp
+  · intro hq
+    apply h
+    right
+    exact hq

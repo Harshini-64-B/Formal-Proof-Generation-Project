@@ -1,0 +1,37 @@
+domain,difficulty,error_type,Count
+Group,Easy,Unsolved Goals,4
+Group,Easy,Tactic Failure,3
+Group,Easy,Other,1
+Group,Easy,Type Mismatch,1
+Group,Hard,Application Type Mismatch,2
+Group,Hard,Unknown Identifier,1
+Group,Medium,Unsolved Goals,2
+Group,Medium,Other,1
+Group,Medium,Tactic Failure,1
+List,Easy,Unsolved Goals,2
+List,Easy,Tactic Failure,1
+List,Easy,Unknown Constant,1
+List,Hard,Unsolved Goals,2
+List,Hard,No Goals to be Solved,1
+List,Hard,Tactic Failure,1
+List,Medium,Unknown Constant,3
+List,Medium,Tactic Failure,2
+List,Medium,Unsolved Goals,1
+Nat,Easy,Unknown Constant,2
+Nat,Easy,Unsolved Goals,2
+Nat,Easy,Application Type Mismatch,1
+Nat,Easy,Tactic Failure,1
+Nat,Easy,Unknown Identifier,1
+Nat,Hard,Unsolved Goals,3
+Nat,Hard,Unknown Identifier,2
+Nat,Medium,Unsolved Goals,5
+Nat,Medium,Unknown Identifier,1
+Prop,Easy,Unsolved Goals,3
+Prop,Easy,Type Mismatch,1
+Prop,Hard,Unsolved Goals,3
+Prop,Hard,Application Type Mismatch,1
+Prop,Hard,No Goals to be Solved,1
+Prop,Hard,Type Mismatch,1
+Prop,Medium,Other,1
+Prop,Medium,Unknown Identifier,1
+Prop,Medium,Unsolved Goals,1

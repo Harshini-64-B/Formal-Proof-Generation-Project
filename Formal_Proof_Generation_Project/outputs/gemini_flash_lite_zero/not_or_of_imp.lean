@@ -1,7 +1,11 @@
-theorem not_or_of_imp {a b : Prop} : (a → b) → ¬a ∨ b := by
+theorem demorgan_1 {P Q : Prop} : ¬ (P ∨ Q) → ¬ P ∧ ¬ Q := by
   intro h
-  by_cases ha : a
-  · right
-    exact h ha
-  · left
-    exact ha
+  constructor
+  · intro hp
+    apply h
+    left
+    exact hp
+  · intro hq
+    apply h
+    right
+    exact hq

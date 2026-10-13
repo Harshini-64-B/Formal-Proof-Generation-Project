@@ -1,2 +1,4 @@
-theorem choose_zero_succ (k : ℕ) : Nat.choose 0 (Nat.succ k) = 0 := by
-  rfl
+theorem factorial_pos (n : 1 ≤ n) : 0 < n.factorial := by
+  rcases n with _ | n
+  · contradiction
+  · exact Nat.factorial_pos n

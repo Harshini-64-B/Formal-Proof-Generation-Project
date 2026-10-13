@@ -1,2 +1,2 @@
-theorem mem_reverse {α} {x : α} {l : List α} : x ∈ l.reverse ↔ x ∈ l := by
-  simp
+theorem list_reverse_involutive (l : List α) : l.reverse.reverse = l := by
+  exact List.reverse_reverse l

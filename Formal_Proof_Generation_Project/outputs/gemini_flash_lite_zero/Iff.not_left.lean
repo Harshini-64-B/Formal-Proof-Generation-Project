@@ -1,7 +1,11 @@
-theorem Iff.not_left {a b : Prop} (h : a ↔ ¬b) : ¬a ↔ b := by
+theorem ex_1_3_7 (P Q : Prop) : (P ∧ Q) ∨ (P ∧ ¬Q) ↔ P := by
   constructor
-  · intro ha
-    by_contra hb
-    exact ha (h.mp.mt hb)
-  · intro hb ha
-    exact (h.mp ha) hb
+  · rintro (⟨hP, _⟩ | ⟨hP, _⟩)
+    · exact hP
+    · exact hP
+  · intro hP
+    by_cases hQ : Q
+    · left
+      exact ⟨hP, hQ⟩
+    · right
+      exact ⟨hP, hQ⟩

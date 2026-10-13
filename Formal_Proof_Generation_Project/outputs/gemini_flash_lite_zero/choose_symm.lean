@@ -1,2 +1,2 @@
-theorem choose_symm {n k : ℕ} (hk : k ≤ n) : Nat.choose n (n - k) = Nat.choose n k := by
-  exact Nat.choose_symm hk
+theorem nat_choose_self_two (n : ) : n.choose 2 = n * (n - 1) / 2 := by
+  exact Nat.choose_two_right n

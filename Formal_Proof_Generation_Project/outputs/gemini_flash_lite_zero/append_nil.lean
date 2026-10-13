@@ -1,5 +1,4 @@
-theorem append_nil (l : List α) : l ++ [] = l := by
-  induction l with
+theorem list_rev_nil_inv {α : Type} (l : List α) (h : l.reverse = []) : l = [] := by
+  cases l with
   | nil => rfl
-  | cons x xs ih =>
-    simp [ih]
+  | cons x xs => contradiction

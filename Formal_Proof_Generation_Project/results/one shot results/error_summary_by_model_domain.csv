@@ -1,0 +1,49 @@
+Model,domain,error_type,Count
+gemini_flash_lite_one,Group,Tactic Application / Strategy Failure,5
+gemini_flash_lite_one,Group,Unsolved Goals,5
+gemini_flash_lite_one,Group,Unknown / Unsupported Tactic,3
+gemini_flash_lite_one,Group,Other,2
+gemini_flash_lite_one,Group,Extra Tactic after Solved,1
+gemini_flash_lite_one,Group,Type Mismatch / Wrong Argument,1
+gemini_flash_lite_one,List,Other,2
+gemini_flash_lite_one,List,Syntax / Malformed Proof Structure,2
+gemini_flash_lite_one,List,Tactic Application / Strategy Failure,2
+gemini_flash_lite_one,List,Simp Failure / No Progress,1
+gemini_flash_lite_one,List,Unknown / Unsupported Tactic,1
+gemini_flash_lite_one,List,Unsolved Goals,1
+gemini_flash_lite_one,Nat,Unknown / Unsupported Tactic,7
+gemini_flash_lite_one,Nat,Other,2
+gemini_flash_lite_one,Nat,Tactic Application / Strategy Failure,2
+gemini_flash_lite_one,Nat,Extra Tactic after Solved,1
+gemini_flash_lite_one,Nat,Type Mismatch / Wrong Argument,1
+gemini_flash_lite_one,Nat,Unsolved Goals,1
+gemini_flash_lite_one,Prop,Unknown / Unsupported Tactic,11
+gemini_flash_lite_one,Prop,Type Mismatch / Wrong Argument,2
+gemini_flash_lite_one,Prop,Extra Tactic after Solved,1
+gemma_one,Group,Tactic Application / Strategy Failure,8
+gemma_one,Group,Unsolved Goals,6
+gemma_one,Group,Other,5
+gemma_one,Group,Extra Tactic after Solved,2
+gemma_one,Group,Simp Failure / No Progress,1
+gemma_one,Group,Type Mismatch / Wrong Argument,1
+gemma_one,Group,Unknown / Unsupported Tactic,1
+gemma_one,List,Tactic Application / Strategy Failure,8
+gemma_one,List,Extra Tactic after Solved,4
+gemma_one,List,Simp Failure / No Progress,4
+gemma_one,List,Other,1
+gemma_one,List,Unsolved Goals,1
+gemma_one,Nat,Unsolved Goals,6
+gemma_one,Nat,Other,5
+gemma_one,Nat,Tactic Application / Strategy Failure,5
+gemma_one,Nat,Simp Failure / No Progress,4
+gemma_one,Nat,Unknown / Unsupported Tactic,3
+gemma_one,Nat,Type Mismatch / Wrong Argument,1
+gemma_one,Prop,Tactic Application / Strategy Failure,7
+gemma_one,Prop,Other,2
+gemma_one,Prop,Type Mismatch / Wrong Argument,2
+gemma_one,Prop,Unknown / Unsupported Tactic,2
+gemma_one,Prop,Unsolved Goals,2
+gemma_one,Prop,Extra Tactic after Solved,1
+gemma_one,Prop,Invalid Field / Projection,1
+gemma_one,Prop,Simp Failure / No Progress,1
+gemma_one,Prop,Syntax / Malformed Proof Structure,1

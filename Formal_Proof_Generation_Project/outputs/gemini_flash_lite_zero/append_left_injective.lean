@@ -1,3 +1,2 @@
-theorem append_left_injective (t : List α) : Function.Injective fun (s : List α) => s ++ t := by
-  intro a b h
-  exact List.append_right_cancel h
+theorem list_reverse_involutive {α : Type} (l : List α) : l.reverse.reverse = l := by
+  exact List.reverse_reverse l

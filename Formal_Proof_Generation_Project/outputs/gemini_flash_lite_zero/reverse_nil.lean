@@ -1,2 +1,2 @@
-theorem reverse_nil : ([] : List α).reverse = [] := by
-  rfl
+theorem list_append_nil (l : List α) : l ++ [] = l := by
+  exact List.append_nil l

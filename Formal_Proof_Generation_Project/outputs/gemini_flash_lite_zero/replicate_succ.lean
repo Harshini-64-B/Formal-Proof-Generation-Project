@@ -1,2 +1,2 @@
-theorem replicate_succ {a : α} {n : Nat} : List.replicate (n + 1) a = a :: List.replicate n a := by
-  rfl
+theorem list_reverse_involutive (l : List α) : l.reverse.reverse = l := by
+  exact List.reverse_reverse l

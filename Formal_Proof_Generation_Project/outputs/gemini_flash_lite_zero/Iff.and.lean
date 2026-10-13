@@ -1,6 +1,9 @@
-theorem Iff.and {a c b d : Prop} (h₁ : a ↔ c) (h₂ : b ↔ d) : a ∧ b ↔ c ∧ d := by
-  constructor
-  · rintro ⟨ha, hb⟩
-    exact ⟨h₁.mp ha, h₂.mp hb⟩
-  · rintro ⟨hc, hd⟩
-    exact ⟨h₁.mpr hc, h₂.mpr hd⟩
+theorem Peirce (P Q : Prop) : ((P → Q) → P) → P := by
+  intro h
+  by_cases hP : P
+  · exact hP
+  · exfalso
+    apply h
+    intro p
+    exfalso
+    exact hP p

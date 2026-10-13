@@ -1,0 +1,38 @@
+Model,difficulty,error_type,Count
+gemini_flash_lite_one,Easy,Tactic Application / Strategy Failure,6
+gemini_flash_lite_one,Easy,Unknown / Unsupported Tactic,6
+gemini_flash_lite_one,Easy,Unsolved Goals,5
+gemini_flash_lite_one,Easy,Other,3
+gemini_flash_lite_one,Easy,Type Mismatch / Wrong Argument,3
+gemini_flash_lite_one,Easy,Extra Tactic after Solved,1
+gemini_flash_lite_one,Easy,Simp Failure / No Progress,1
+gemini_flash_lite_one,Hard,Unknown / Unsupported Tactic,8
+gemini_flash_lite_one,Hard,Extra Tactic after Solved,2
+gemini_flash_lite_one,Hard,Syntax / Malformed Proof Structure,2
+gemini_flash_lite_one,Hard,Other,1
+gemini_flash_lite_one,Hard,Tactic Application / Strategy Failure,1
+gemini_flash_lite_one,Medium,Unknown / Unsupported Tactic,8
+gemini_flash_lite_one,Medium,Other,2
+gemini_flash_lite_one,Medium,Tactic Application / Strategy Failure,2
+gemini_flash_lite_one,Medium,Unsolved Goals,2
+gemini_flash_lite_one,Medium,Type Mismatch / Wrong Argument,1
+gemma_one,Easy,Tactic Application / Strategy Failure,12
+gemma_one,Easy,Unsolved Goals,9
+gemma_one,Easy,Simp Failure / No Progress,6
+gemma_one,Easy,Other,4
+gemma_one,Easy,Extra Tactic after Solved,3
+gemma_one,Easy,Unknown / Unsupported Tactic,3
+gemma_one,Easy,Type Mismatch / Wrong Argument,2
+gemma_one,Easy,Syntax / Malformed Proof Structure,1
+gemma_one,Hard,Tactic Application / Strategy Failure,11
+gemma_one,Hard,Other,3
+gemma_one,Hard,Simp Failure / No Progress,3
+gemma_one,Hard,Unsolved Goals,3
+gemma_one,Hard,Type Mismatch / Wrong Argument,2
+gemma_one,Medium,Other,6
+gemma_one,Medium,Tactic Application / Strategy Failure,5
+gemma_one,Medium,Extra Tactic after Solved,4
+gemma_one,Medium,Unknown / Unsupported Tactic,3
+gemma_one,Medium,Unsolved Goals,3
+gemma_one,Medium,Invalid Field / Projection,1
+gemma_one,Medium,Simp Failure / No Progress,1

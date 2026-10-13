@@ -1,2 +1,4 @@
-theorem map_nil {α β} (f : α → β) : List.map f [] = [] := by
-  rfl
+theorem list_append_nil {α : Type} (xs : List α) : xs ++ [] = xs := by
+  induction xs with
+  | nil => rfl
+  | cons y ys ih => simp [ih]

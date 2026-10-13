@@ -1,0 +1,58 @@
+domain,difficulty,error_type,Count
+Group,Easy,Tactic Application / Strategy Failure,11
+Group,Easy,Unsolved Goals,9
+Group,Easy,Extra Tactic after Solved,3
+Group,Easy,Type Mismatch / Wrong Argument,2
+Group,Easy,Other,1
+Group,Easy,Unknown / Unsupported Tactic,1
+Group,Hard,Other,3
+Group,Hard,Tactic Application / Strategy Failure,1
+Group,Medium,Other,3
+Group,Medium,Unknown / Unsupported Tactic,3
+Group,Medium,Unsolved Goals,2
+Group,Medium,Simp Failure / No Progress,1
+Group,Medium,Tactic Application / Strategy Failure,1
+List,Easy,Simp Failure / No Progress,5
+List,Easy,Tactic Application / Strategy Failure,2
+List,Easy,Other,1
+List,Easy,Unknown / Unsupported Tactic,1
+List,Hard,Tactic Application / Strategy Failure,6
+List,Hard,Syntax / Malformed Proof Structure,2
+List,Medium,Extra Tactic after Solved,4
+List,Medium,Other,2
+List,Medium,Tactic Application / Strategy Failure,2
+List,Medium,Unsolved Goals,2
+Nat,Easy,Other,4
+Nat,Easy,Unsolved Goals,4
+Nat,Easy,Tactic Application / Strategy Failure,3
+Nat,Easy,Simp Failure / No Progress,2
+Nat,Easy,Type Mismatch / Wrong Argument,2
+Nat,Easy,Unknown / Unsupported Tactic,2
+Nat,Hard,Unknown / Unsupported Tactic,3
+Nat,Hard,Simp Failure / No Progress,2
+Nat,Hard,Unsolved Goals,2
+Nat,Hard,Extra Tactic after Solved,1
+Nat,Hard,Other,1
+Nat,Hard,Tactic Application / Strategy Failure,1
+Nat,Medium,Unknown / Unsupported Tactic,5
+Nat,Medium,Tactic Application / Strategy Failure,3
+Nat,Medium,Other,2
+Nat,Medium,Unsolved Goals,1
+Prop,Easy,Unknown / Unsupported Tactic,5
+Prop,Easy,Tactic Application / Strategy Failure,2
+Prop,Easy,Extra Tactic after Solved,1
+Prop,Easy,Other,1
+Prop,Easy,Syntax / Malformed Proof Structure,1
+Prop,Easy,Type Mismatch / Wrong Argument,1
+Prop,Easy,Unsolved Goals,1
+Prop,Hard,Unknown / Unsupported Tactic,5
+Prop,Hard,Tactic Application / Strategy Failure,4
+Prop,Hard,Type Mismatch / Wrong Argument,2
+Prop,Hard,Extra Tactic after Solved,1
+Prop,Hard,Simp Failure / No Progress,1
+Prop,Hard,Unsolved Goals,1
+Prop,Medium,Unknown / Unsupported Tactic,3
+Prop,Medium,Invalid Field / Projection,1
+Prop,Medium,Other,1
+Prop,Medium,Tactic Application / Strategy Failure,1
+Prop,Medium,Type Mismatch / Wrong Argument,1

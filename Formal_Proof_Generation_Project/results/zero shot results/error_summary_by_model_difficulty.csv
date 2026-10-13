@@ -1,0 +1,19 @@
+Model,difficulty,error_type,Count
+gemini_flash_lite_zero,Easy,Unsolved Goals,11
+gemini_flash_lite_zero,Easy,Tactic Failure,5
+gemini_flash_lite_zero,Easy,Unknown Constant,3
+gemini_flash_lite_zero,Easy,Type Mismatch,2
+gemini_flash_lite_zero,Easy,Application Type Mismatch,1
+gemini_flash_lite_zero,Easy,Other,1
+gemini_flash_lite_zero,Easy,Unknown Identifier,1
+gemini_flash_lite_zero,Hard,Unsolved Goals,8
+gemini_flash_lite_zero,Hard,Application Type Mismatch,3
+gemini_flash_lite_zero,Hard,Unknown Identifier,3
+gemini_flash_lite_zero,Hard,No Goals to be Solved,2
+gemini_flash_lite_zero,Hard,Tactic Failure,1
+gemini_flash_lite_zero,Hard,Type Mismatch,1
+gemini_flash_lite_zero,Medium,Unsolved Goals,9
+gemini_flash_lite_zero,Medium,Tactic Failure,3
+gemini_flash_lite_zero,Medium,Unknown Constant,3
+gemini_flash_lite_zero,Medium,Other,2
+gemini_flash_lite_zero,Medium,Unknown Identifier,2

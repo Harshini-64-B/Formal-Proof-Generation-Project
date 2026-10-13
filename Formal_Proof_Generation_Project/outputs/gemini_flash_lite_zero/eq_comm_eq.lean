@@ -1,3 +1,3 @@
-theorem eq_comm_eq {α : Sort*} (a b : α) : (a = b) = (b = a) := by
-  ext
-  constructor <;> intro h <;> rw [h]
+theorem and_comm {P Q : Prop} : P ∧ Q → Q ∧ P := by
+  intro h
+  exact ⟨h.right, h.left⟩

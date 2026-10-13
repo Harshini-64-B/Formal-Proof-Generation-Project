@@ -1,5 +1,2 @@
-theorem mul_factorial_pred (hn : n ≠ 0) : n * Nat.factorial (n - 1) = Nat.factorial n := by
-  cases n with
-  | zero => contradiction
-  | succ n =>
-    simp [Nat.factorial_succ]
+theorem nat_choose_two (n : 0 < 2 → n.choose 2 = n * (n - 1) / 2) : n.choose 2 = n * (n - 1) / 2 := by
+  exact n (by decide)

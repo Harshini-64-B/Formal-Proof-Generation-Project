@@ -1,0 +1,22 @@
+Model,domain,error_type,Count
+gemini_flash_lite_zero,Group,Unsolved Goals,6
+gemini_flash_lite_zero,Group,Tactic Failure,4
+gemini_flash_lite_zero,Group,Application Type Mismatch,2
+gemini_flash_lite_zero,Group,Other,2
+gemini_flash_lite_zero,Group,Type Mismatch,1
+gemini_flash_lite_zero,Group,Unknown Identifier,1
+gemini_flash_lite_zero,List,Unsolved Goals,5
+gemini_flash_lite_zero,List,Tactic Failure,4
+gemini_flash_lite_zero,List,Unknown Constant,4
+gemini_flash_lite_zero,List,No Goals to be Solved,1
+gemini_flash_lite_zero,Nat,Unsolved Goals,10
+gemini_flash_lite_zero,Nat,Unknown Identifier,4
+gemini_flash_lite_zero,Nat,Unknown Constant,2
+gemini_flash_lite_zero,Nat,Application Type Mismatch,1
+gemini_flash_lite_zero,Nat,Tactic Failure,1
+gemini_flash_lite_zero,Prop,Unsolved Goals,7
+gemini_flash_lite_zero,Prop,Type Mismatch,2
+gemini_flash_lite_zero,Prop,Application Type Mismatch,1
+gemini_flash_lite_zero,Prop,No Goals to be Solved,1
+gemini_flash_lite_zero,Prop,Other,1
+gemini_flash_lite_zero,Prop,Unknown Identifier,1

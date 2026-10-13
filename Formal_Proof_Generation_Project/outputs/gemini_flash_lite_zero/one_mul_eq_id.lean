@@ -1,3 +1,2 @@
-theorem one_mul_eq_id {M : Type u_4} [MulOneClass M] : (fun (x : M) => 1 * x) = id := by
-  ext x
-  exact one_mul x
+theorem inv_inv {G : Type*} [Group G] (a : G) : (a⁻¹)⁻¹ = a := by
+  exact inv_inv a

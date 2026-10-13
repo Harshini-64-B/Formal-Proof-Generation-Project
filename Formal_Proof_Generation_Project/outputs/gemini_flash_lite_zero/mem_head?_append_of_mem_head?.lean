@@ -1,6 +1,4 @@
-theorem mem_head?_append_of_mem_head? {s t : List α} {x : α} (h : x ∈ s.head?) : x ∈ (s ++ t).head? := by
-  cases s with
-  | nil => contradiction
-  | cons a s =>
-    simp only [List.head?_cons] at h ⊢
-    exact h
+theorem list_append_nil {α : Type} (xs : List α) : xs ++ [] = xs := by
+  induction xs with
+  | nil => rfl
+  | cons y ys ih => rw [List.cons_append, ih]

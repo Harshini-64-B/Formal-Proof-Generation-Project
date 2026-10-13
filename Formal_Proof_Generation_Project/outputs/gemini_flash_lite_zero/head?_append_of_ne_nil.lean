@@ -1,5 +1,3 @@
-theorem head?_append_of_ne_nil : ∀ (a : List α) {b : List α} (_ : a ≠ []), (a ++ b).head? = a.head? := by
-  intro a b h
-  cases a with
-  | nil => contradiction
-  | cons x xs => rfl
+theorem list_concat_singleton_rev {α : Type*} (x : α) (xs : List α) :
+    (xs ++ [x]).reverse = x :: xs.reverse := by
+  simp

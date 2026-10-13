@@ -1,2 +1,5 @@
-theorem mul_div_assoc' {G : Type u_3} [DivInvMonoid G] (a b c : G) : a * (b / c) = a * b / c := by
-  rw [div_eq_mul_inv, mul_assoc, ← div_eq_mul_inv]
+theorem group_cancel_left {G : Type*} [Group G] (a b c : G) (h : a * b = a * c) : b = c := by
+  have h1 : a⁻¹ * (a * b) = a⁻¹ * (a * c) := by rw [h]
+  rw [← mul_assoc, inv_mul_cancel, one_mul] at h1
+  rw [← mul_assoc, inv_mul_cancel, one_mul] at h1
+  exact h1

@@ -1,3 +1,8 @@
-theorem iff_eq_eq {a b : Prop} : (a ↔ b) = (a = b) := by
-  ext
-  simp
+theorem pierce_law {P Q : Prop} : ((P → Q) → P) → P := by
+  intro h
+  by_cases hP : P
+  · exact hP
+  · exfalso
+    apply h
+    intro hp
+    false_elim (hP hp)

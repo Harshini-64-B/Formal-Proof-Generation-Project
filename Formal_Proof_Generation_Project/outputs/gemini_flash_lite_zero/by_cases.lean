@@ -1,4 +1,5 @@
-theorem by_cases {p q : Prop} (hpq : p → q) (hnpq : ¬p → q) : q := by
-  by_cases h : p
-  · exact hpq h
-  · exact hnpq h
+theorem not_not_of_not_not_implies (P : Prop) : ¬¬¬P → ¬P := by
+  intro hnp hlp
+  apply hnp
+  intro hlp2
+  exact hlp2 hlp

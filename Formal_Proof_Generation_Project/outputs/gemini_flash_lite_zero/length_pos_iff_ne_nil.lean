@@ -1,4 +1,4 @@
-theorem length_pos_iff_ne_nil {l : List α} : l ≠ [] ↔ 0 < l.length := by
-  cases l with
-  | nil => simp
-  | cons x xs => simp
+theorem list_append_nil {α : Type} (xs : List α) : xs ++ [] = xs := by
+  induction xs with
+  | nil => rfl
+  | cons y ys ih => simp [ih]

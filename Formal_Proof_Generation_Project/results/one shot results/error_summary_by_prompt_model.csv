@@ -1,0 +1,18 @@
+Model,Prompt Type,Error Category,Count
+GEMINI,flash_lite_one,Unknown / Unsupported Tactic,22
+GEMINI,flash_lite_one,Tactic Application / Strategy Failure,9
+GEMINI,flash_lite_one,Unsolved Goals,7
+GEMINI,flash_lite_one,Other,6
+GEMINI,flash_lite_one,Type Mismatch / Wrong Argument,4
+GEMINI,flash_lite_one,Extra Tactic after Solved,3
+GEMINI,flash_lite_one,Syntax / Malformed Proof Structure,2
+GEMINI,flash_lite_one,Simp Failure / No Progress,1
+GEMMA,one,Tactic Application / Strategy Failure,28
+GEMMA,one,Unsolved Goals,15
+GEMMA,one,Other,13
+GEMMA,one,Simp Failure / No Progress,10
+GEMMA,one,Extra Tactic after Solved,7
+GEMMA,one,Unknown / Unsupported Tactic,6
+GEMMA,one,Type Mismatch / Wrong Argument,4
+GEMMA,one,Invalid Field / Projection,1
+GEMMA,one,Syntax / Malformed Proof Structure,1

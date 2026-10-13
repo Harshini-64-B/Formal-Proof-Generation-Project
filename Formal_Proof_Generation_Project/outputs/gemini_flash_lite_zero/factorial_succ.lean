@@ -1,2 +1,2 @@
-theorem factorial_succ (n : ℕ) : Nat.factorial (n + 1) = (n + 1) * Nat.factorial n := by
+theorem nat_choose_two (n : 8) : Nat.choose n 2 = n * (n - 1) / 2 := by
   rfl

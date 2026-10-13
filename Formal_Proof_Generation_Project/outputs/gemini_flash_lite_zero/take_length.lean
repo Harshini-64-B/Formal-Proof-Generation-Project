@@ -1,5 +1,2 @@
-theorem take_length {α} (l : List α) : l.take l.length = l := by
-  induction l with
-  | nil => rfl
-  | cons x xs ih =>
-    simp [List.take_succ, ih]
+theorem list_reverse_involutive (l : List α) : l.reverse.reverse = l := by
+  exact List.reverse_reverse l

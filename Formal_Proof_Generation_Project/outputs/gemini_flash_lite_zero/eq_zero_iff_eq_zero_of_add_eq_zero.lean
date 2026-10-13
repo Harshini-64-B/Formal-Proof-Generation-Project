@@ -1,8 +1,4 @@
-theorem eq_zero_iff_eq_zero_of_add_eq_zero {M : Type u_4} [AddZeroClass M] {a b : M} (h : a + b = 0) : a = 0 ↔ b = 0 := by
-  constructor
-  · intro ha
-    rw [ha, zero_add] at h
-    exact h
-  · intro hb
-    rw [hb, add_zero] at h
-    exact h
+theorem inv_eq_of_mul_eq_one {G : Type*} [Group G] {a b : G} (h : a * b = 1) : a⁻¹ = b := by
+  have h1 : a⁻¹ * (a * b) = a⁻¹ * 1 := by rw [h]
+  rw [mul_one, ← mul_assoc, inv_mul_cancel, one_mul] at h1
+  exact h1.symm

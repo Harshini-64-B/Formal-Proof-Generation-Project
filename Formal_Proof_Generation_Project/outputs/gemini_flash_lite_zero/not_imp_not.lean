@@ -1,7 +1,11 @@
-theorem not_imp_not {a b : Prop} : ¬a → ¬b ↔ b → a := by
+theorem demorgans_law_1 {P Q : Prop} : ¬ (P ∨ Q) → ¬ P ∧ ¬ Q := by
+  intro h
   constructor
-  · intro h hb
-    by_contra ha
-    exact h ha hb
-  · intro h hna hb
-    exact hna (h hb)
+  · intro hp
+    apply h
+    left
+    exact hp
+  · intro hq
+    apply h
+    right
+    exact hq

@@ -1,4 +1,2 @@
-theorem choose_succ_left (n k : ℕ) (hk : 0 < k) : Nat.choose (n + 1) k = Nat.choose n (k - 1) + Nat.choose n k := by
-  cases k with
-  | zero => contradiction
-  | succ k' => exact Nat.choose_succ_succ n k'
+theorem nat_choose_self_two (n : ) (h : 2 ≤ n) : Nat.choose n 2 = n * (n - 1) / 2 := by
+  exact Nat.choose_two_right n

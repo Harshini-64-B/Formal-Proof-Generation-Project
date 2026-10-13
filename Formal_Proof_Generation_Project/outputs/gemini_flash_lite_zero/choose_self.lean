@@ -1,2 +1,2 @@
-theorem choose_self (n : ℕ) : Nat.choose n n = 1 := by
-  exact Nat.choose_self n
+theorem nat_choose_self_two (n : ) (h : 2 ≤ n) : Nat.choose n 2 = n * (n - 1) / 2 := by
+  exact Nat.choose_two_right n

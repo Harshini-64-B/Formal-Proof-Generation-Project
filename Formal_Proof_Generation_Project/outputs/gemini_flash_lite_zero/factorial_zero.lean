@@ -1,2 +1,2 @@
-theorem factorial_zero : Nat.factorial 0 = 1 := by
-  rfl
+theorem nat_choose_two (n : 0 < 2 → ℕ) : (2.choose 1 = 2) := by
+  norm_num

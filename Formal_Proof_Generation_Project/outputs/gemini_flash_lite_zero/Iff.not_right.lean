@@ -1,10 +1,13 @@
-theorem Iff.not_right {a b : Prop} (h : ¬a ↔ b) : a ↔ ¬b := by
+theorem de_morgan_not_and_not (P Q : Prop) : ¬ (P ∧ Q) ↔ ¬ P ∨ ¬ Q := by
   constructor
-  · intro ha hb
-    have : ¬a := fun hA => hA ha
-    have : b := h.mp this
-    contradiction
-  · intro hnb
-    by_contra ha
-    have : b := h.mp ha
-    contradiction
+  · intro h
+    by_cases hP : P
+    · right
+      intro hQ
+      exact h ⟨hP, hQ⟩
+    · left
+      exact hP
+  · intro h hpq
+    rcases h with hp | hq
+    · exact hp hpq.1
+    · exact hq hpq.2

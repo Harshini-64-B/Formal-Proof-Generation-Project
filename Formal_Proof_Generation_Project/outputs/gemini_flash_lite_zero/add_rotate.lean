@@ -1,2 +1,7 @@
-theorem add_rotate {G : Type u_3} [AddCommSemigroup G] (a b c : G) : a + b + c = b + c + a := by
-  rw [add_assoc, add_comm a, ← add_assoc]
+theorem left_inv_eq_right_inv {G : Type*} [Group G] {x y z : G} (h1 : x * y = 1) (h2 : z * x = 1) : y = z := by
+  have h3 : z * (x * y) = z * 1 := by rw [h1]
+  rw [mul_one] at h3
+  rw [← mul_assoc] at h3
+  rw [h2] at h3
+  rw [one_mul] at h3
+  exact h3.symm

@@ -1,2 +1,6 @@
-theorem neg_sub_left {α : Type u_1} [SubtractionMonoid α] (a b : α) : -a - b = -(b + a) := by
-  rw [sub_eq_neg_add, neg_add_rev, add_comm]
+theorem group_inv_unique {G : Type*} [Group G] {a b : G} (h : a * b = 1) : a⁻¹ = b := by
+  calc
+    a⁻¹ = a⁻¹ * (a * b) := by rw [h, mul_one]
+    _ = (a⁻¹ * a) * b := by rw [mul_assoc]
+    _ = 1 * b := by rw [inv_mul_cancel]
+    _ = b := by rw [one_mul]

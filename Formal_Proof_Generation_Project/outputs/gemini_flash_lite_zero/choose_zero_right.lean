@@ -1,2 +1,2 @@
-theorem choose_zero_right (n : ℕ) : n.choose 0 = 1 := by
-  exact Nat.choose_zero_right n
+theorem Nat.choose_self_eq_one (n : ℕ) : n.choose n = 1 := by
+  exact Nat.choose_self n

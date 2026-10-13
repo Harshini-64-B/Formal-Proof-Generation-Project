@@ -1,4 +1,4 @@
-theorem length_map {α β} (f : α → β) (l : List α) : (l.map f).length = l.length := by
-  induction l with
+theorem list_reverse_involutive {α : Type} (xs : List α) : xs.reverse.reverse = xs := by
+  induction xs with
   | nil => rfl
   | cons x xs ih => simp [ih]

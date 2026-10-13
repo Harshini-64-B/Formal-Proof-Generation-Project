@@ -1,0 +1,1 @@
+model,prompt_type,domain,theorem_file,output_file,prompt_tokens,completion_tokens,total_tokens,latency_seconds

@@ -1,2 +1,2 @@
-theorem reverse_singleton (a : α) : ([a] : List α).reverse = [a] := by
-  rfl
+theorem list_append_nil (l : List α) : l ++ [] = l := by
+  exact List.append_nil l

@@ -1,2 +1,2 @@
-theorem pow_eq_pow_mod {M : Type u_4} [Monoid M] {a : M} {n : ℕ} (m : ℕ) (ha : a ^ n = 1) : a ^ m = a ^ (m % n) := by
-  rw [← Nat.div_add_mod m n, pow_add, (by rw [pow_mul, ha, one_pow] : a ^ (n * (m / n)) = 1), one_mul]
+theorem mul_inv_eq_of_eq_mul {G : Type*} [Group G] {a b c : G} (h : a = c * b) : a * b⁻¹ = c := by
+  rw [h, mul_inv_cancel_right]

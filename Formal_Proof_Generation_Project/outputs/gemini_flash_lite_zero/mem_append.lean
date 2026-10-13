@@ -1,6 +1,2 @@
-theorem mem_append {α} {a : α} {s t : List α} : a ∈ s ++ t ↔ a ∈ s ∨ a ∈ t := by
-  induction s with
-  | nil =>
-    simp
-  | cons x xs ih =>
-    simp [List.mem_cons, ih, or_assoc]
+theorem list_reverse_involutive (l : List α) : l.reverse.reverse = l := by
+  exact List.reverse_reverse l

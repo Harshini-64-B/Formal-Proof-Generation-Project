@@ -1,2 +1,2 @@
-theorem nil_append (l : List α) : [] ++ l = l := by
-  rfl
+theorem list_reverse_involutive (l : List α) : l.reverse.reverse = l := by
+  exact List.reverse_reverse l

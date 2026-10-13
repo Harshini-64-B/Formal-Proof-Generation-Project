@@ -1,9 +1,9 @@
-theorem self_le_factorial : ∀ n : ℕ, n ≤ Nat.factorial n := by
-  intro n
-  induction' n with n ih
-  · simp
-  · cases' n with m
-    · simp
-    · have h1 : m.succ ≤ Nat.factorial m.succ := by
-        exact Nat.le_trans ih (Nat.le_mul_of_pos_right (Nat.factorial m.succ) (by omega))
-      exact h1
+theorem nat_choose_two_self (n : ) : (n.choose 2) * 2 = n * (n - 1) := by
+  cases n with
+  | zero => simp
+  | succ n =>
+    cases n with
+    | zero => simp
+    | succ n =>
+      rw [Nat.choose_succ_succ]
+      omega

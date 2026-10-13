@@ -1,3 +1,6 @@
-theorem comp_add_left {α : Type u_1} [AddSemigroup α] (x y : α) : ((fun (x_1 : α) => x + x_1) ∘ fun (x : α) => y + x) = fun (x_1 : α) => x + y + x_1 := by
-  ext a
-  simp only [Function.comp_apply, add_assoc]
+theorem inv_unique {G : Type*} [Group G] {a b : G} (h : a * b = 1) : a⁻¹ = b := by
+  calc a⁻¹ = a⁻¹ * 1 := (mul_one a⁻¹).symm
+  _ = a⁻¹ * (a * b) := by rw [h]
+  _ = (a⁻¹ * a) * b := (mul_assoc a⁻¹ a b).symm
+  _ = 1 * b := by rw [inv_mul_cancel]
+  _ = b := one_mul b

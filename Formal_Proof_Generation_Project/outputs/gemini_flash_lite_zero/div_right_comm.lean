@@ -1,2 +1,2 @@
-theorem div_right_comm (a b c : Nat) : a / b / c = a / c / b := by
-  rw [Nat.div_div_eq_div_mul, Nat.div_div_eq_div_mul, Nat.mul_comm]
+theorem nat_choose_self_two (n : ) : Nat.choose n 2 = n * (n - 1) / 2 := by
+  exact Nat.choose_two_right n

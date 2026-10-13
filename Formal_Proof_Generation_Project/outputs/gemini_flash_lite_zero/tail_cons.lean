@@ -1,2 +1,4 @@
-theorem tail_cons {α} (a : α) (l : List α) : (a :: l).tail = l := by
-  rfl
+theorem list_append_nil {α : Type} (xs : List α) : xs ++ [] = xs := by
+  induction xs with
+  | nil => rfl
+  | cons y ys ih => simp [ih]

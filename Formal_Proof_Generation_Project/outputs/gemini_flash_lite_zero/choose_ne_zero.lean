@@ -1,2 +1,2 @@
-theorem choose_ne_zero {n k : ℕ} (h : k ≤ n) : n.choose k ≠ 0 := by
-  exact Nat.ne_of_gt (Nat.choose_pos h)
+theorem nat_choose_self_two (n : ) (h : 2 ≤ n) : Nat.choose n 2 = n * (n - 1) / 2 := by
+  exact Nat.choose_two_right n

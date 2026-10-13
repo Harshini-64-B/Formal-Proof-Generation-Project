@@ -1,2 +1,3 @@
-theorem not_ne_iff {α : Sort u_1} {a b : α} : ¬a ≠ b ↔ a = b := by
-  exact not_not
+theorem exercise_1_1_4 (P Q R : Prop) : (P → (Q → R)) → ((P → Q) → (P → R)) := by
+  intro h1 h2 h3
+  exact h1 h3 (h2 h3)

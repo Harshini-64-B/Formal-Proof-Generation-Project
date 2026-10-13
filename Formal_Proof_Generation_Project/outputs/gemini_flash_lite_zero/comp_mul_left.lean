@@ -1,3 +1,2 @@
-theorem comp_mul_left {α : Type u_1} [Semigroup α] (x y : α) : ((fun (x_1 : α) => x * x_1) ∘ fun (x : α) => y * x) = fun (x_1 : α) => x * y * x_1 := by
-  ext z
-  simp [mul_assoc]
+theorem inv_inv {G : Type*} [Group G] (a : G) : (a⁻¹)⁻¹ = a := by
+  exact inv_inv a

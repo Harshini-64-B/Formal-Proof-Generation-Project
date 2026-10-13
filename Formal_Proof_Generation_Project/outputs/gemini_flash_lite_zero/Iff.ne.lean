@@ -1,10 +1,11 @@
-theorem Iff.ne {α β : Sort*} {a b : α} {c d : β} : (a = b ↔ c = d) → (a ≠ b ↔ c ≠ d) := by
+theorem demorgan_1 {P Q : Prop} : ¬ (P ∨ Q) → ¬ P ∧ ¬ Q := by
   intro h
   constructor
-  · intro h1 h2
-    apply h1
-    exact (iff_iff_eq_eq_or_something... wait, use not_iff)
-    exact (iff_not_iff.mp h).mp h2
-  · intro h1 h2
-    apply h1
-    exact (iff_not_iff.mp h).mpr h2
+  · intro hp
+    apply h
+    left
+    exact hp
+  · intro hq
+    apply h
+    right
+    exact hq

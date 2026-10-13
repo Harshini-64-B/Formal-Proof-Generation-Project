@@ -1,2 +1,9 @@
-theorem eq_or_ne {α : Sort u_1} (x y : α) : x = y ∨ x ≠ y := by
-  exact em (x = y)
+theorem Peirce_law (P Q : Prop) : ((P → Q) → P) → P := by
+  intro h
+  by_cases hP : P
+  · exact hP
+  · exfalso
+    apply h
+    intro hp
+    exfalso
+    exact hP hp

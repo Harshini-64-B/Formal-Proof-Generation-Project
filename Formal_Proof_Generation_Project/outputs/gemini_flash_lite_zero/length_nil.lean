@@ -1,2 +1,4 @@
-theorem length_nil: ([] : List α).length = 0 := by
-  rfl
+theorem list_append_nil {α : Type} (l : List α) : l ++ [] = l := by
+  induction' l with x l ih
+  · rfl
+  · simp [ih]

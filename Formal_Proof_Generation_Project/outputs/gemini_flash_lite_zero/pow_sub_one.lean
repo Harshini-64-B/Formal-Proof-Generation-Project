@@ -1,3 +1,5 @@
-theorem pow_sub_one {x a : ℕ} (hx : x ≠ 0) (ha : a ≠ 0) : x ^ (a - 1) = x ^ a / x := by
-  obtain ⟨a', rfl⟩ := Nat.exists_eq_succ_of_ne_zero ha
-  rw [Nat.add_sub_cancel, pow_succ, Nat.mul_div_cancel_left _ hx]
+theorem nat_choose_two (n : 0 < n) : Nat.choose n 2 = n * (n - 1) / 2 := by
+  cases' n with n'
+  · contradiction
+  · change Nat.succ n' * (Nat.succ n' - 1) / 2 = Nat.succ n' * (Nat.succ n' - 1) / 2
+    exact rfl

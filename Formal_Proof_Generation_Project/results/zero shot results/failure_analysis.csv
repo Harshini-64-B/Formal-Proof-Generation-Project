@@ -1,0 +1,583 @@
+folder,file,error_type,error
+gemini_flash_lite_zero,Iff.ne.lean,Unknown Identifier,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/Iff.ne.verify.lean:10:11: error(lean.unknownIdentifier): Unknown identifier `iff_iff_eq_eq_or_something`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/Iff.ne.verify.lean:10:41: error(lean.unknownIdentifier): Unknown identifier `wait`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/Iff.ne.verify.lean:10:47: error(lean.unknownIdentifier): Unknown identifier `use`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/Iff.ne.verify.lean:14:11: error(lean.unknownIdentifier): Unknown identifier `iff_not_iff.mp`"
+gemini_flash_lite_zero,Iff.not_left.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/Iff.not_left.verify.lean:8:5: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/Iff.not_left.verify.lean:7:2: error: unsolved goals
+case mp
+a b : Prop
+h : a ↔ ¬b
+ha : ¬a
+⊢ b
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/Iff.not_left.verify.lean:5:59: error: unsolved goals
+case mpr
+a b : Prop
+h : a ↔ ¬b
+⊢ b → ¬a"
+gemini_flash_lite_zero,Iff.not_right.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/Iff.not_right.verify.lean:12:5: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/Iff.not_right.verify.lean:8:27: error: Function expected at
+  hA
+but this term has type
+  a
+
+Note: Expected a function because this term is being applied to the argument
+  ha
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/Iff.not_right.verify.lean:11:2: error: unsolved goals
+case mpr
+a b : Prop
+h : ¬a ↔ b
+hnb : ¬b
+⊢ a"
+gemini_flash_lite_zero,Xor.or.lean,Other,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/Xor.or.verify.lean:7:17: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression
+  hab
+has type `a` which does not have the necessary form.
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/Xor.or.verify.lean:8:17: error: Invalid projection: Projections cannot be used on functions, and
+  hab
+has function type `a → False`"
+gemini_flash_lite_zero,add_ne_left.lean,Application Type Mismatch,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/add_ne_left.verify.lean:12:26: error: Application type mismatch: The argument
+  hab
+has type
+  a + b = a
+but is expected to have type
+  ?m.33 + b = ?m.33 + 0
+in the application
+  add_left_cancel hab"
+gemini_flash_lite_zero,add_rotate.lean,Tactic Failure,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/add_rotate.verify.lean:6:29: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?a + (?b + ?c)
+in the target expression
+  b + c + a = b + c + a
+
+G : Type u_3
+inst✝ : AddCommSemigroup G
+a b c : G
+⊢ b + c + a = b + c + a"
+gemini_flash_lite_zero,add_sub_add_comm.lean,Other,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/add_sub_add_comm.verify.lean:5:8: error: fail to show termination for
+  Algebra_Group.add_sub_add_comm
+with errors
+failed to infer structural recursion:
+Not considering parameter α of Algebra_Group.add_sub_add_comm:
+  it is unchanged in the recursive calls
+Not considering parameter #2 of Algebra_Group.add_sub_add_comm:
+  it is unchanged in the recursive calls
+Not considering parameter a of Algebra_Group.add_sub_add_comm:
+  it is unchanged in the recursive calls
+Not considering parameter b of Algebra_Group.add_sub_add_comm:
+  it is unchanged in the recursive calls
+Not considering parameter c of Algebra_Group.add_sub_add_comm:
+  it is unchanged in the recursive calls
+Not considering parameter d of Algebra_Group.add_sub_add_comm:
+  it is unchanged in the recursive calls
+no parameters suitable for structural recursion
+
+well-founded recursion cannot be used, `Algebra_Group.add_sub_add_comm` does not take any (non-fixed) arguments"
+gemini_flash_lite_zero,append_left_injective.lean,Unknown Constant,Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/append_left_injective.verify.lean:5:8: error(lean.unknownIdentifier): Unknown constant `List.append_right_cancel`
+gemini_flash_lite_zero,append_right_injective.lean,Unknown Constant,Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/append_right_injective.verify.lean:5:8: error(lean.unknownIdentifier): Unknown constant `List.append_left_cancel`
+gemini_flash_lite_zero,boole_nsmul.lean,Other,Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/boole_nsmul.verify.lean:6:16: error: `simp` made no progress
+gemini_flash_lite_zero,choose_one_right.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/choose_one_right.verify.lean:6:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/choose_one_right.verify.lean:5:57: error: unsolved goals
+n : ℕ
+⊢ n.choose 1 = n"
+gemini_flash_lite_zero,choose_succ_self.lean,Unknown Constant,Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/choose_succ_self.verify.lean:6:8: error(lean.unknownIdentifier): Unknown constant `Nat.choose_gt_of_lt`
+gemini_flash_lite_zero,cons_head?_tail.lean,Tactic Failure,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/cons_head?_tail.verify.lean:9:4: error: Tactic `subst` failed: invalid equality proof, it is not of the form (x = t) or (t = x)
+  a ∈ some x
+
+case cons
+α : Type u_1
+a x : α
+xs : List α
+h : a ∈ some x
+⊢ a :: (x :: xs).tail = x :: xs
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/cons_head?_tail.verify.lean:8:27: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.head?,̵ ̵L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`"
+gemini_flash_lite_zero,div_mul_eq_div_mul_one_div.lean,Tactic Failure,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/div_mul_eq_div_mul_one_div.verify.lean:6:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (?a * ?b)⁻¹
+in the target expression
+  a / (b * c) = a / b * (1 / c)
+
+α : Type u_1
+inst✝ : DivisionCommMonoid α
+a b c : α
+⊢ a / (b * c) = a / b * (1 / c)"
+gemini_flash_lite_zero,dvd_factorial.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_factorial.verify.lean:7:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_factorial.verify.lean:5:72: error: unsolved goals
+m n : ℕ
+hm : 0 < m
+h : m ≤ n
+⊢ m ∣ n.factorial"
+gemini_flash_lite_zero,dvd_left_injective.lean,Unknown Identifier,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_left_injective.verify.lean:7:23: error(lean.unknownIdentifier): Unknown identifier `dvd_rfl`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_left_injective.verify.lean:8:30: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (fun x1 x2 => x1 ∣ x2) x1
+in the target expression
+  x1 ∣ x2
+
+x1 x2 : ℕ
+h : (fun x1 x2 => x1 ∣ x2) x1 = (fun x1 x2 => x1 ∣ x2) x2
+h1 : x1 ∣ x1
+⊢ x1 ∣ x2
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_left_injective.verify.lean:9:23: error(lean.unknownIdentifier): Unknown identifier `dvd_rfl`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_left_injective.verify.lean:10:30: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (fun x1 x2 => x1 ∣ x2) x1
+in the target expression
+  x1 ∣ x1
+
+x1 x2 : ℕ
+h : (fun x1 x2 => x1 ∣ x2) x1 = (fun x1 x2 => x1 ∣ x2) x2
+h1 : x1 ∣ x1
+h2 : x1 ∣ x2
+h3 : x2 ∣ x2
+⊢ x2 ∣ x1"
+gemini_flash_lite_zero,dvd_sub_self_left.lean,Unknown Identifier,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_sub_self_left.verify.lean:12:60: error: Application type mismatch: The argument
+  h2
+has type
+  ¬m = 0
+but is expected to have type
+  n ≠ 0
+in the application
+  Nat.pos_of_ne_zero h2
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_sub_self_left.verify.lean:16:12: error: Function expected at
+  h3
+but this term has type
+  m < n
+
+Note: Expected a function because this term is being applied to the argument
+  h6
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_sub_self_left.verify.lean:19:12: error(lean.unknownIdentifier): Unknown identifier `dvd_refl`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_sub_self_left.verify.lean:21:12: error(lean.unknownIdentifier): Unknown identifier `dvd_zero`"
+gemini_flash_lite_zero,dvd_sub_self_right.lean,Unknown Identifier,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_sub_self_right.verify.lean:11:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro ""push_neg"" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_sub_self_right.verify.lean:12:35: error(lean.unknownIdentifier): Unknown identifier `dvd_add`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_sub_self_right.verify.lean:17:12: error(lean.unknownIdentifier): Unknown constant `Nat.dvd_sub_of_dvd_right`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/dvd_sub_self_right.verify.lean:19:12: error(lean.unknownIdentifier): Unknown identifier `dvd_zero`"
+gemini_flash_lite_zero,eq_cons_of_mem_head?.lean,Unknown Constant,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/eq_cons_of_mem_head?.verify.lean:8:27: error(lean.unknownIdentifier): Unknown constant `List.mem_some`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/eq_cons_of_mem_head?.verify.lean:9:4: error: Tactic `subst` failed: invalid equality proof, it is not of the form (x = t) or (t = x)
+  x ∈ some hd
+
+case cons
+α : Type u_1
+x hd : α
+tl : List α
+h : x ∈ some hd
+⊢ hd :: tl = x :: (hd :: tl).tail
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/eq_cons_of_mem_head?.verify.lean:8:42: warning: This simp argument is unused:
+  List.tail_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [List.head?, List.mem_some,̵ ̵L̵i̵s̵t̵.̵t̵a̵i̵l̵_̵c̵o̵n̵s̵] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`"
+gemini_flash_lite_zero,eq_iff_eq_cancel_left.lean,Type Mismatch,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/eq_iff_eq_cancel_left.verify.lean:8:4: error: Type mismatch
+  Eq.symm (h.mp rfl)
+has type
+  c = b
+but is expected to have type
+  b = c"
+gemini_flash_lite_zero,factorial_dvd_factorial.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_dvd_factorial.verify.lean:6:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_dvd_factorial.verify.lean:5:89: error: unsolved goals
+m n : ℕ
+h : m ≤ n
+⊢ m.factorial ∣ n.factorial"
+gemini_flash_lite_zero,factorial_eq_one.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_eq_one.verify.lean:15:34: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_eq_one.verify.lean:14:56: error: unsolved goals
+case h₁
+n m : ℕ
+h : (m + 2).factorial = 1
+this✝ : (m + 2).factorial = (m + 2) * (m + 1).factorial
+this : (m + 1).factorial ≥ 1
+⊢ 2 ≤ m + 2
+
+case h₂
+n m : ℕ
+h : (m + 2).factorial = 1
+this✝ : (m + 2).factorial = (m + 2) * (m + 1).factorial
+this : (m + 1).factorial ≥ 1
+⊢ 1 ≤ (m + 1).factorial
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_eq_one.verify.lean:11:12: error: unsolved goals
+n m : ℕ
+h : (m + 2).factorial = 1
+this✝¹ : (m + 2).factorial = (m + 2) * (m + 1).factorial
+this✝ : (m + 1).factorial ≥ 1
+this : (m + 2) * (m + 1).factorial ≥ 2 * 1
+⊢ m + 2 ≤ 1
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_eq_one.verify.lean:5:58: error: unsolved goals
+case mpr
+n : ℕ
+⊢ n ≤ 1 → n.factorial = 1"
+gemini_flash_lite_zero,factorial_le.lean,Application Type Mismatch,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_le.verify.lean:9:26: error: Application type mismatch: The argument
+  Nat.le_mul_of_pos_right ?m.29 (Nat.factorial_pos ?m.30)
+has type
+  ?m.29 ≤ ?m.29 * Nat.factorial ?m.30
+but is expected to have type
+  m✝.factorial ≤ m✝.succ.factorial
+in the application
+  Nat.le_trans ih (Nat.le_mul_of_pos_right ?m.29 (Nat.factorial_pos ?m.30))"
+gemini_flash_lite_zero,factorial_le_pow.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_le_pow.verify.lean:7:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_le_pow.verify.lean:5:59: error: unsolved goals
+n : ℕ
+⊢ n.factorial ≤ n ^ n"
+gemini_flash_lite_zero,factorial_mul_pow_le_factorial.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_mul_pow_le_factorial.verify.lean:7:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_mul_pow_le_factorial.verify.lean:5:111: error: unsolved goals
+m n : ℕ
+⊢ m.factorial * (m + 1) ^ n ≤ (m + n).factorial"
+gemini_flash_lite_zero,factorial_ne_zero.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_ne_zero.verify.lean:6:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/factorial_ne_zero.verify.lean:5:59: error: unsolved goals
+n : ℕ
+⊢ n.factorial ≠ 0"
+gemini_flash_lite_zero,getElem?_length.lean,Unknown Constant,Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/getElem?_length.verify.lean:4:8: error(lean.unknownIdentifier): Unknown constant `List.getElem?_len`
+gemini_flash_lite_zero,left_eq_add.lean,Application Type Mismatch,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/left_eq_add.verify.lean:10:26: error: Application type mismatch: The argument
+  h2
+has type
+  a + 0 = a + b
+but is expected to have type
+  ?m.39 + b = ?m.39 + 0
+in the application
+  add_left_cancel h2"
+gemini_flash_lite_zero,length_append.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_append.verify.lean:5:11: error: Tactic `rfl` failed: The left-hand side
+  ([] ++ l₂).length
+is not definitionally equal to the right-hand side
+  [].length + l₂.length
+
+case nil
+α : Type u_1
+l₂ : List α
+⊢ ([] ++ l₂).length = [].length + l₂.length
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_append.verify.lean:6:17: error: unsolved goals
+case cons
+α : Type u_1
+l₂ : List α
+x : α
+xs : List α
+ih : (xs ++ l₂).length = xs.length + l₂.length
+⊢ l₂.length + 1 = 1 + l₂.length"
+gemini_flash_lite_zero,length_eq_four.lean,Tactic Failure,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_four.verify.lean:5:12: error: Tactic `cases` failed with a nested error:
+Dependent elimination failed: Failed to solve equation
+  4 = l.length
+at case `Eq.refl`"
+gemini_flash_lite_zero,length_eq_succ_iff.lean,No Goals to be Solved,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_succ_iff.verify.lean:6:32: error(lean.unknownIdentifier): Unknown constant `Nat.zero_eq_add_one`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_succ_iff.verify.lean:7:10: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case nil
+α : Type u_1
+n : ℕ
+⊢ 0 = n + 1 ↔ ∃ a t, a :: t = [] ∧ t.length = n
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_succ_iff.verify.lean:14:6: error: No goals to be solved
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_succ_iff.verify.lean:18:6: error: Type mismatch
+  Eq.symm h2
+has type
+  n = t'.length
+but is expected to have type
+  t'.length = n
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_succ_iff.verify.lean:6:53: warning: This simp argument is unused:
+  false_iff
+
+Hint: Omit it from the simp argument list.
+  simp only [List.length_nil, Nat.zero_eq_add_one, f̵a̵l̵s̵e̵_̵i̵f̵f̵,̵ ̵not_exists]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_succ_iff.verify.lean:6:64: warning: This simp argument is unused:
+  not_exists
+
+Hint: Omit it from the simp argument list.
+  simp only [List.length_nil, Nat.zero_eq_add_one, false_iff,̵ ̵n̵o̵t̵_̵e̵x̵i̵s̵t̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`"
+gemini_flash_lite_zero,length_eq_three.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_three.verify.lean:5:11: error: Tactic `cases` failed with a nested error:
+Dependent elimination failed: Failed to solve equation
+  3 = l.length
+at case `Eq.refl`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_three.verify.lean:3:84: error: unsolved goals
+case mpr
+α : Type u_1
+l : List α
+⊢ (∃ a b c, l = [a, b, c]) → l.length = 3
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_three.verify.lean:5:26: error: unexpected token '|'; expected command"
+gemini_flash_lite_zero,length_eq_two.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_two.verify.lean:5:12: error: Tactic `cases` failed with a nested error:
+Dependent elimination failed: Failed to solve equation
+  2 = l.length
+at case `Eq.refl`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_two.verify.lean:3:77: error: unsolved goals
+case mpr
+α : Type u_1
+l : List α
+⊢ (∃ a b, l = [a, b]) → l.length = 2
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/length_eq_two.verify.lean:5:37: error: unexpected token '<-'; expected command"
+gemini_flash_lite_zero,mul_div_assoc'.lean,Tactic Failure,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/mul_div_assoc'.verify.lean:6:22: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?a * ?b * ?c
+in the target expression
+  a * (b * c⁻¹) = a * b / c
+
+G : Type u_3
+inst✝ : DivInvMonoid G
+a b c : G
+⊢ a * (b * c⁻¹) = a * b / c"
+gemini_flash_lite_zero,mul_le_pow.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/mul_le_pow.verify.lean:6:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/mul_le_pow.verify.lean:5:67: error: unsolved goals
+a : ℕ
+ha : a ≠ 1
+b : ℕ
+⊢ a * b ≤ a ^ b"
+gemini_flash_lite_zero,mul_one_div.lean,Type Mismatch,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/mul_one_div.verify.lean:6:2: error: Type mismatch
+  mul_div_assoc x 1 y
+has type
+  x * 1 / y = x * (1 / y)
+but is expected to have type
+  x * (1 / y) = x / y"
+gemini_flash_lite_zero,mul_pow.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/mul_pow.verify.lean:6:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/mul_pow.verify.lean:5:97: error: unsolved goals
+M : Type u_4
+inst✝ : CommMonoid M
+a b : M
+n : ℕ
+⊢ (a * b) ^ n = a ^ n * b ^ n"
+gemini_flash_lite_zero,mul_pow_sub_one.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/mul_pow_sub_one.verify.lean:8:11: error: unsolved goals
+case succ
+M : Type u_4
+inst✝ : Monoid M
+a : M
+k : ℕ
+hn : k + 1 ≠ 0
+⊢ a * a ^ k = a ^ k * a"
+gemini_flash_lite_zero,mul_rotate.lean,Tactic Failure,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/mul_rotate.verify.lean:6:37: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?a * (?b * ?c)
+in the target expression
+  b * c * a = b * c * a
+
+G : Type u_3
+inst✝ : CommSemigroup G
+a b c : G
+⊢ b * c * a = b * c * a"
+gemini_flash_lite_zero,neg_nsmul.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/neg_nsmul.verify.lean:6:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/neg_nsmul.verify.lean:5:94: error: unsolved goals
+α : Type u_1
+inst✝ : SubtractionMonoid α
+a : α
+n : ℕ
+⊢ n • -a = -(n • a)"
+gemini_flash_lite_zero,neg_sub_left.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/neg_sub_left.verify.lean:6:6: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  SubtractionCommMonoid ?m.15
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/neg_sub_left.verify.lean:5:91: error: unsolved goals
+α : Type u_1
+inst✝ : SubtractionMonoid α
+a b : α
+⊢ -a - b = -(b + a)"
+gemini_flash_lite_zero,not_and_not_right.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/not_and_not_right.verify.lean:8:5: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/not_and_not_right.verify.lean:7:2: error: unsolved goals
+case mp
+a b : Prop
+h : ¬(a ∧ ¬b)
+ha : a
+⊢ b
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/not_and_not_right.verify.lean:5:62: error: unsolved goals
+case mpr
+a b : Prop
+⊢ (a → b) → ¬(a ∧ ¬b)"
+gemini_flash_lite_zero,not_imp_not.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/not_imp_not.verify.lean:8:5: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/not_imp_not.verify.lean:7:2: error: unsolved goals
+case mp
+a b : Prop
+h : ¬a → ¬b
+hb : b
+⊢ a
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/not_imp_not.verify.lean:5:54: error: unsolved goals
+case mpr
+a b : Prop
+⊢ (b → a) → ¬a → ¬b"
+gemini_flash_lite_zero,not_xor.lean,No Goals to be Solved,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/not_xor.verify.lean:12:8: error: No goals to be solved
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/not_xor.verify.lean:9:4: error: unsolved goals
+case neg
+P Q : Prop
+h : ¬Xor P Q
+hp : P
+hq : ¬Q
+⊢ Q
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/not_xor.verify.lean:19:8: error: No goals to be solved
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/not_xor.verify.lean:16:4: error: unsolved goals
+case neg
+P Q : Prop
+h : ¬Xor P Q
+hq : Q
+hp : ¬P
+⊢ P
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/not_xor.verify.lean:32:55: error: Application type mismatch: The argument
+  hq
+has type
+  ¬P
+but is expected to have type
+  Q
+in the application
+  (iff_iff_implies_and_implies.mp h).right hq
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/not_xor.verify.lean:33:12: error: Function expected at
+  hp
+but this term has type
+  Q
+
+Note: Expected a function because this term is being applied to the argument
+  this"
+gemini_flash_lite_zero,of_not_imp.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/of_not_imp.verify.lean:7:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/of_not_imp.verify.lean:5:50: error: unsolved goals
+a b : Prop
+h : ¬(a → b)
+⊢ a"
+gemini_flash_lite_zero,of_not_not.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/of_not_not.verify.lean:7:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/of_not_not.verify.lean:5:43: error: unsolved goals
+a : Prop
+h : ¬¬a
+⊢ a"
+gemini_flash_lite_zero,one_lt_factorial.lean,Unknown Identifier,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/one_lt_factorial.verify.lean:25:34: error(lean.unknownIdentifier): Unknown identifier `succ`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/one_lt_factorial.verify.lean:26:36: error(lean.unknownIdentifier): Unknown identifier `succ`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/one_lt_factorial.verify.lean:26:47: error: Function expected at
+  Nat.lt_add_left ?m.177 ?m.178
+but this term has type
+  ?m.175 < ?m.177 + ?m.176
+
+Note: Expected a function because this term is being applied to the argument
+  _
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/one_lt_factorial.verify.lean:27:12: error(lean.unknownIdentifier): Unknown identifier `succ`
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/one_lt_factorial.verify.lean:27:43: error(lean.unknownIdentifier): Unknown identifier `succ`"
+gemini_flash_lite_zero,pow_eq_pow_mod.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/pow_eq_pow_mod.verify.lean:5:115: error: unsolved goals
+M : Type u_4
+inst✝ : Monoid M
+a : M
+n m : ℕ
+ha : a ^ n = 1
+⊢ a ^ (m % n) = a ^ ((n * (m / n) + m % n) % n)"
+gemini_flash_lite_zero,pow_left_injective.lean,Unknown Constant,Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/pow_left_injective.verify.lean:7:8: error(lean.unknownIdentifier): Unknown constant `Nat.pow_left_cancel`
+gemini_flash_lite_zero,pow_mul_pow_eq_one.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/pow_mul_pow_eq_one.verify.lean:7:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/pow_mul_pow_eq_one.verify.lean:5:106: error: unsolved goals
+M : Type u_4
+inst✝ : Monoid M
+a b : M
+n : ℕ
+h : a * b = 1
+⊢ a ^ n * b ^ n = 1"
+gemini_flash_lite_zero,pow_sub_one.lean,Tactic Failure,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/pow_sub_one.verify.lean:7:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?n + ?m - ?m
+in the target expression
+  x ^ (a'.succ - 1) = x ^ a'.succ / x
+
+x : ℕ
+hx : x ≠ 0
+a' : ℕ
+ha : a'.succ ≠ 0
+⊢ x ^ (a'.succ - 1) = x ^ a'.succ / x"
+gemini_flash_lite_zero,replicate_add.lean,Tactic Failure,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/replicate_add.verify.lean:5:12: error: Tactic `rfl` failed: The left-hand side
+  List.replicate (0 + n) a
+is not definitionally equal to the right-hand side
+  List.replicate 0 a ++ List.replicate n a
+
+case zero
+α : Type u_1
+n : ℕ
+a : α
+⊢ List.replicate (0 + n) a = List.replicate 0 a ++ List.replicate n a
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/replicate_add.verify.lean:7:4: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information"
+gemini_flash_lite_zero,reverse_reverse.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/reverse_reverse.verify.lean:4:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/reverse_reverse.verify.lean:3:68: error: unsolved goals
+α : Type u_1
+l : List α
+⊢ l.reverse.reverse = l"
+gemini_flash_lite_zero,self_le_factorial.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/self_le_factorial.verify.lean:7:3: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/self_le_factorial.verify.lean:5:60: error: unsolved goals
+n : ℕ
+⊢ n ≤ n.factorial"
+gemini_flash_lite_zero,sub_eq_neg_self.lean,Unknown Identifier,Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/sub_eq_neg_self.verify.lean:9:24: error(lean.unknownIdentifier): Unknown identifier `neg_add_self`
+gemini_flash_lite_zero,take_length.lean,Tactic Failure,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/take_length.verify.lean:7:10: warning: `List.take_succ` has been deprecated: Use `List.take_add_one` instead
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/take_length.verify.lean:7:4: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information"
+gemini_flash_lite_zero,take_zero.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/take_zero.verify.lean:3:54: error: unsolved goals
+case nil
+α : Type u_1
+⊢ List.take 0 [] = []
+
+case cons
+α : Type u_1
+head✝ : α
+tail✝ : List α
+⊢ List.take 0 (head✝ :: tail✝) = []
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/take_zero.verify.lean:4:10: error: unexpected token '<-'; expected command"
+gemini_flash_lite_zero,triangle_succ.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/triangle_succ.verify.lean:11:7: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/triangle_succ.verify.lean:11:4: error: unsolved goals
+case succ
+k : ℕ
+h1 : k + 1 + 1 - 1 = k + 1
+⊢ (k + 1 + 1) * (k + 1) = (k + 1) * (k + 1 - 1) + 2 * (k + 1)
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/triangle_succ.verify.lean:5:83: error: unsolved goals
+n : ℕ
+h1 : n + 1 - 1 = n
+h2 : (n + 1) * n = n * (n - 1) + 2 * n
+⊢ (n + 1) * n / 2 = n * (n - 1) / 2 + n"
+gemini_flash_lite_zero,xor_not_left.lean,Type Mismatch,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_left.verify.lean:9:39: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_left.verify.lean:9:22: error: Type mismatch
+  h2
+has type
+  ¬¬a
+but is expected to have type
+  b
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_left.verify.lean:9:35: error: unsolved goals
+a b : Prop
+h1 : b
+h2 : ¬¬a
+x✝ : b
+⊢ a
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_left.verify.lean:5:60: error: unsolved goals
+case mpr
+a b : Prop
+⊢ (a ↔ b) → Xor (¬a) b"
+gemini_flash_lite_zero,xor_not_not.lean,Unsolved Goals,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_not.verify.lean:9:7: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_not.verify.lean:8:4: error: unsolved goals
+case mp.inl.h
+a b : Prop
+h1 : ¬a
+h2 : ¬¬b
+⊢ b ∧ ¬a
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_not.verify.lean:7:2: error: unsolved goals
+case mp.inr
+a b : Prop
+h1 : ¬b
+h2 : ¬¬a
+⊢ Xor a b
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_not.verify.lean:5:60: error: unsolved goals
+case mpr
+a b : Prop
+⊢ Xor a b → Xor (¬a) ¬b"
+gemini_flash_lite_zero,xor_not_right.lean,Application Type Mismatch,"Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_right.verify.lean:9:21: error: unknown tactic
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_right.verify.lean:9:13: error: Application type mismatch: The argument
+  ha
+has type
+  a
+but is expected to have type
+  a → b
+in the application
+  Iff.intro ha
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_right.verify.lean:9:17: error: unsolved goals
+a b : Prop
+ha : a
+hnb : ¬¬b
+⊢ b → a
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_right.verify.lean:8:2: error: unsolved goals
+case mp.inr
+a b : Prop
+hna : ¬b
+hb : ¬a
+⊢ a ↔ b
+Formal_Proof_Generation_Project/outputs/gemini_flash_lite_zero/xor_not_right.verify.lean:5:59: error: unsolved goals
+case mpr
+a b : Prop
+⊢ (a ↔ b) → a ∧ ¬¬b ∨ ¬b ∧ ¬a"

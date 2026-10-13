@@ -1,2 +1,2 @@
-theorem getElem?_length (l : List α) : l[l.length]? = none := by
-  exact List.getElem?_len l
+theorem list_reverse_involutive (l : List α) : l.reverse.reverse = l := by
+  exact List.reverse_reverse l

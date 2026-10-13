@@ -1,0 +1,9 @@
+Model,Prompt Type,Error Category,Count
+GEMINI,flash_lite_zero,Unsolved Goals,28
+GEMINI,flash_lite_zero,Tactic Failure,9
+GEMINI,flash_lite_zero,Unknown Constant,6
+GEMINI,flash_lite_zero,Unknown Identifier,6
+GEMINI,flash_lite_zero,Application Type Mismatch,4
+GEMINI,flash_lite_zero,Other,3
+GEMINI,flash_lite_zero,Type Mismatch,3
+GEMINI,flash_lite_zero,No Goals to be Solved,2

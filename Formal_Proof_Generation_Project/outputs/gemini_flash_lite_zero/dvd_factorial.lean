@@ -1,6 +1,2 @@
-theorem dvd_factorial : ∀ {m n}, 0 < m → m ≤ n → m ∣ Nat.factorial n := by
-  intro m n hm h
-  induction' h with k hk ih
-  · exact dvd_refl _
-  · rw [Nat.factorial_succ]
-    exact dvd_mul_of_dvd_right ih (k.succ)
+theorem nat_choose_self_two (n : ) (h : 2 ≤ n) : Nat.choose n 2 = n * (n - 1) / 2 := by
+  exact Nat.choose_two_right n

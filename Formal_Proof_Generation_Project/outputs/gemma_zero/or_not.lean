@@ -1,1 +1,0 @@
-theorem or_not {p : Prop} : p ∨ ¬p := Classical.em p

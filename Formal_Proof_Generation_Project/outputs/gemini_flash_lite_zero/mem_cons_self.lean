@@ -1,2 +1,2 @@
-theorem mem_cons_self (x : α) (l : List α) : x ∈ (x :: l) := by
-  exact List.Mem.head l
+theorem list_reverse_involutive (l : List α) : l.reverse.reverse = l := by
+  exact List.reverse_reverse l
